@@ -10,4 +10,8 @@ class Constants {
   static const String userImage =
   // 'https://demo.cocobasic.com/volos-wp/demo-3/wp-content/uploads/2019/12/main_image_02.jpg';
       'https://images.unsplash.com/photo-1541855492-581f618f69a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bWFsZXxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60';
+static const String iconDesign ='assets/icons/icon_design_x2_green.png';
+static const String iconDevelop ='assets/icons/icon_develop_x2_green.png';
+static const String iconPromote ='assets/icons/icon_promote_x2_green.png';
+static const String iconWrite ='assets/icons/icon_write_x2_green.png';
 }

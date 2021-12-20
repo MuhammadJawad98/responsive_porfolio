@@ -37,7 +37,7 @@ class MainScreen extends StatelessWidget {
     final GlobalKey<ScaffoldState> _key = GlobalKey(); // Create a key
     return Scaffold(
       key: _key,
-      drawer: Drawer(
+      drawer:const Drawer(
         backgroundColor: AppColors.greenColor,
       ),
       extendBodyBehindAppBar: true,
@@ -45,7 +45,7 @@ class MainScreen extends StatelessWidget {
         backgroundColor: AppColors.transparentColor,
         elevation: 0.0,
         leading: IconButton(
-          icon: Icon(Icons.menu, color: AppColors.whiteColor),
+          icon: const Icon(Icons.menu, color: AppColors.whiteColor),
           // set your color here
           onPressed: () {
             _key.currentState!.openDrawer();

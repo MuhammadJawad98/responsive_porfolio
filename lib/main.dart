@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/utils/colors.dart';
 import 'package:portfolio/utils/responsive.dart';
+import 'package:portfolio/views/desktop/desktop_content.dart';
 import 'package:portfolio/views/desktop/desktop_drawer.dart';
 
 void main() {
@@ -86,7 +87,7 @@ class MainScreen extends StatelessWidget {
                   width: double.infinity,
                   height: double.infinity,
                   color: AppColors.greyColor,
-                  padding: const EdgeInsets.only(top: 100.0),
+                  padding: const EdgeInsets.only(top: 150.0),
                   child: const DesktopDrawer(),
                 )),
             Expanded(
@@ -95,6 +96,7 @@ class MainScreen extends StatelessWidget {
                 width: double.infinity,
                 height: double.infinity,
                 color: AppColors.whiteColor,
+                child: const DesktopContent(),
               ),
             ),
           ],

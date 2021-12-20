@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/utils/colors.dart';
 
 class TitleText extends StatelessWidget {
-  const TitleText({Key? key, required this.text, this.fontSize})
+  const TitleText({Key? key, required this.text, this.fontSize,this.fontWeight})
       : super(key: key);
   final String text;
   final double? fontSize;
+  final FontWeight? fontWeight;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,7 @@ class TitleText extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Text(
         text,
-        style: TextStyle(color: AppColors.greenColor, fontSize: fontSize),
+        style: TextStyle(color: AppColors.greenColor, fontSize: fontSize,fontWeight: fontWeight),
       ),
     );
   }

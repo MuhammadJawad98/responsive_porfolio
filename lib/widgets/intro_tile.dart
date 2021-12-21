@@ -18,7 +18,11 @@ class IntroTile extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Image.asset(iconPath),
+        Center(
+          child: Image.asset(iconPath,width: 200,
+              height: 200,
+              fit:BoxFit.fill  ),
+        ),
         TitleText(text: heading),
         CustomText(text: text),
       ],

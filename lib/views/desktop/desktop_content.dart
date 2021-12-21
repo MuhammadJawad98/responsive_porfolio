@@ -13,10 +13,12 @@ class DesktopContent extends StatelessWidget {
 
     return SingleChildScrollView(
       child: Column(
-        children:  [
+        children:   [
           // const ImageContainer(),
-         const IntroductionSection(),
+          const  IntroductionSection(),
           // Container(width: 100,height: 500,color: AppColors.greenColor,),
+          // const IntroductionSection(),
+
         ],
       ),
     );

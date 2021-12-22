@@ -22,4 +22,7 @@ static const String image3='https://images.unsplash.com/photo-1610563166150-b34d
 static const String image4='https://images.unsplash.com/photo-1617240016072-d92174e44171?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Y29tcHV0ZXIlMjBzY2llbmNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60';
 static const String image5='https://images.unsplash.com/photo-1550439062-609e1531270e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGNvbXB1dGVyJTIwc2NpZW5jZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60';
 static const String image6='https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGNvbXB1dGVyJTIwc2NpZW5jZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60';
+
+static const String text='2015 - 2017 Turpis metus sit diam purus leo in varius ac quam. Nunc amet tristique volutpat adipiscing vulputate phasellus. Eget enim aliquam euismod mauris in vitae viverra blandit lectus diam feugiat. Nunc amet tristique volutpat adipiscing vulputate phasellus. Eget enim aliquam.';
+
 }

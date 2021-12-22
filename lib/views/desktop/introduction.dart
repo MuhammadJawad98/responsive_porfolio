@@ -4,27 +4,18 @@ import 'package:portfolio/utils/constants.dart';
 import 'package:portfolio/widgets/custom_button.dart';
 import 'package:portfolio/widgets/custom_image_tile.dart';
 import 'package:portfolio/widgets/custom_text.dart';
+import 'package:portfolio/widgets/experience_tile.dart';
 import 'package:portfolio/widgets/intro_text_row.dart';
 import 'package:portfolio/widgets/intro_tile.dart';
 import 'package:portfolio/widgets/title_text.dart';
 
-class IntroductionSection extends StatefulWidget {
+class IntroductionSection extends StatelessWidget {
   const IntroductionSection({Key? key}) : super(key: key);
 
   @override
-  State<IntroductionSection> createState() => _IntroductionSectionState();
-}
-
-class _IntroductionSectionState extends State<IntroductionSection> {
-  @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
-    var _activeStepIndex=0;
-    List<Step> stepList() => [
-      const Step(title: CustomText(text:'Account'), content: Center(child: CustomText(text:'Account'),)),
-      const Step(title: CustomText(text:'Address'), content: Center(child: CustomText(text:'Address'),)),
-      const Step(title: CustomText(text:'Confirm'), content: Center(child: CustomText(text:'Confirm'),))
-    ];
+
     return Container(
       width: double.infinity,
       height: height,
@@ -34,7 +25,9 @@ class _IntroductionSectionState extends State<IntroductionSection> {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            const SizedBox(height: 80,),
+            const SizedBox(
+              height: 80,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -139,44 +132,92 @@ class _IntroductionSectionState extends State<IntroductionSection> {
                 ),
               ],
             ),
-            const SizedBox(height: 80,),
+            const SizedBox(
+              height: 80,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: const [
-                CustomImageTile(imgUrl: Constants.image1,text: 'Demo 1',),
-                SizedBox(width: 50.0,),
-                CustomImageTile(imgUrl: Constants.image2,text: 'Demo 2',),
-                SizedBox(width: 50.0,),
-                CustomImageTile(imgUrl: Constants.image3,text: 'Demo 3',),
-
+                CustomImageTile(
+                  imgUrl: Constants.image1,
+                  text: 'Demo 1',
+                ),
+                SizedBox(
+                  width: 50.0,
+                ),
+                CustomImageTile(
+                  imgUrl: Constants.image2,
+                  text: 'Demo 2',
+                ),
+                SizedBox(
+                  width: 50.0,
+                ),
+                CustomImageTile(
+                  imgUrl: Constants.image3,
+                  text: 'Demo 3',
+                ),
               ],
             ),
-            const SizedBox(height: 50,),
+            const SizedBox(
+              height: 50,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: const [
-                CustomImageTile(imgUrl: Constants.image4,text: 'Demo 4',),
-                SizedBox(width: 50.0,),
-                CustomImageTile(imgUrl: Constants.image5,text: 'Demo 5',),
-                SizedBox(width: 50.0,),
-                CustomImageTile(imgUrl: Constants.image6,text: 'Demo 6',),
+                CustomImageTile(
+                  imgUrl: Constants.image4,
+                  text: 'Demo 4',
+                ),
+                SizedBox(
+                  width: 50.0,
+                ),
+                CustomImageTile(
+                  imgUrl: Constants.image5,
+                  text: 'Demo 5',
+                ),
+                SizedBox(
+                  width: 50.0,
+                ),
+                CustomImageTile(
+                  imgUrl: Constants.image6,
+                  text: 'Demo 6',
+                ),
               ],
             ),
-            const SizedBox(height: 50,),
-            Stepper(steps: stepList(),
-              currentStep: _activeStepIndex,
-              onStepContinue: () {
-                // goto next step, simply increment currentStep value by +1
-              },
-              onStepCancel: () {
-                // goto previous step, simply decrement currentStep value by -1
-              },
-              onStepTapped: (int index) {
-                setState(() {
-                  // directly jump to particular step in stepper
-                  _activeStepIndex = index;
-                });
-              },
+            const SizedBox(
+              height: 50,
+            ),
+            Row(
+              children: [
+                Expanded(
+                    flex: 3,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        TitleText(
+                          text: 'Experience',
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        ExperienceTile(title:'2015',text:Constants.text),
+                        ExperienceTile(title:'2015',text:Constants.text),
+                        ExperienceTile(title:'2015',text:Constants.text),
+                        ExperienceTile(title:'2015',text:Constants.text),
+                        ExperienceTile(title:'2015',text:Constants.text,isLast:true),
+                      ],
+                    )),
+                Expanded(
+                    flex: 2,
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          TitleText(
+                            text: 'Cover letter',
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold,
+                          )
+                        ])),
+              ],
             )
           ],
         ),

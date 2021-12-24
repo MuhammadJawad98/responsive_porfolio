@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolio/routes/route_generator.dart';
+import 'package:portfolio/routes/routes.dart';
 import 'package:portfolio/utils/colors.dart';
 import 'package:portfolio/utils/responsive.dart';
 import 'package:portfolio/views/desktop/desktop_content.dart';
@@ -18,6 +20,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Flutter Demo',
+      onGenerateRoute: RouteGenerator.generateRoute,
+      initialRoute: RoutesName.dashboard,
       theme: ThemeData(
         textTheme: GoogleFonts.poppinsTextTheme(
           Theme.of(context).textTheme,

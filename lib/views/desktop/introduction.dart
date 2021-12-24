@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/utils/colors.dart';
 import 'package:portfolio/utils/constants.dart';
@@ -25,6 +26,7 @@ class IntroductionSection extends StatelessWidget {
       color: AppColors.greyColor,
       child: SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(
               height: 80,
@@ -193,64 +195,79 @@ class IntroductionSection extends StatelessWidget {
               children: [
                 Expanded(
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        TitleText(
-                          text: 'Experience',
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold,
-                        ),
-                        ExperienceTile(title: '2015', text: Constants.text),
-                        ExperienceTile(title: '2015', text: Constants.text),
-                        ExperienceTile(title: '2015', text: Constants.text),
-                        ExperienceTile(title: '2015', text: Constants.text),
-                        ExperienceTile(
-                            title: '2015', text: Constants.text, isLast: true),
-                      ],
-                    )),
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: const [
+                    TitleText(
+                      text: 'Experience',
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    ExperienceTile(title: '2015', text: Constants.text),
+                    ExperienceTile(title: '2015', text: Constants.text),
+                    ExperienceTile(title: '2015', text: Constants.text),
+                    ExperienceTile(title: '2015', text: Constants.text),
+                    ExperienceTile(
+                        title: '2015', text: Constants.text, isLast: true),
+                  ],
+                )),
                 Expanded(
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: const [
-                          TitleText(
-                            text: 'Cover letter',
-                            fontSize: 30,
-                            fontWeight: FontWeight.bold,
-                          ),
-                          TitleText(
-                            text:
-                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra tristique placerat in massa consectetur quisque nunc fames',
-                            fontSize: 22.0,
-                          ),
-                          SizedBox(height: 30,),
-                          CustomText(
-                            text:
-                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra tristique placerat in massa consectetur quisque. Nunc ac fames lectus in libero aliquet. Mauris egestas nulla arcu, ut vestibulum diam vulputate non. Ut massa mauris, condimentum ut tincidunt eu, mattis euismod dolor.',
-                            fontSize: 20,
-                          ),
-                          SizedBox(height: 30,),
-                          CustomText(
-                            text:
-                                'Faucibus sed tristique fames sed aliquet ultricies eget viverra arcu. Vitae faucibus diam consequat maecenas. Turpis metus sit diam purus leo in varius ac quam. Nunc amet tristique volutpat adipiscing vulputate phasellus. Volutpat faucibus sed condimentum aliquet mi, nec lobortis neque gravida tempor.',
-                            fontSize: 20.0,
-                          ),
-                          SizedBox(height: 30,),
-                          CustomText(
-                            text:
-                                'Faucibus sed tristique fames sed aliquet ultricies eget viverra arcu. Vitae faucibus diam consequat maecenas. Turpis metus sit diam purus leo in varius ac quam. Nunc amet tristique volutpat adipiscing vulputate phasellus. Volutpat faucibus sed condimentum aliquet mi, nec lobortis neque gravida tempor.',
-                            fontSize: 20.0,
-                          ),
-                        ])),
+                      TitleText(
+                        text: 'Cover letter',
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      TitleText(
+                        text:
+                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra tristique placerat in massa consectetur quisque nunc fames',
+                        fontSize: 22.0,
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      CustomText(
+                        text:
+                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra tristique placerat in massa consectetur quisque. Nunc ac fames lectus in libero aliquet. Mauris egestas nulla arcu, ut vestibulum diam vulputate non. Ut massa mauris, condimentum ut tincidunt eu, mattis euismod dolor.',
+                        fontSize: 20,
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      CustomText(
+                        text:
+                            'Faucibus sed tristique fames sed aliquet ultricies eget viverra arcu. Vitae faucibus diam consequat maecenas. Turpis metus sit diam purus leo in varius ac quam. Nunc amet tristique volutpat adipiscing vulputate phasellus. Volutpat faucibus sed condimentum aliquet mi, nec lobortis neque gravida tempor.',
+                        fontSize: 20.0,
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      CustomText(
+                        text:
+                            'Faucibus sed tristique fames sed aliquet ultricies eget viverra arcu. Vitae faucibus diam consequat maecenas. Turpis metus sit diam purus leo in varius ac quam. Nunc amet tristique volutpat adipiscing vulputate phasellus. Volutpat faucibus sed condimentum aliquet mi, nec lobortis neque gravida tempor.',
+                        fontSize: 20.0,
+                      ),
+                    ])),
               ],
             ),
             const SizedBox(
               height: 50,
             ),
-const TitleText(text: 'Skills'),
-            LinearChart(width: 200, percentage: '50%', title: 'Creativity'),
-            LinearChart(width: 250, percentage: '70%', title: 'PhP'),
-            LinearChart(width: 280, percentage: '90%', title: 'Cooking'),
-            LinearChart(width: 220, percentage: '65%', title: 'Marketing'),
+            const TitleText(
+              text: 'Skills',
+              fontSize: 30.0,
+              fontWeight: FontWeight.bold,
+            ),
+            Wrap(
+              direction: Axis.horizontal,
+              children: const [
+                LinearChart(width: 200, percentage: '50%', title: 'Creativity'),
+                LinearChart(width: 250, percentage: '70%', title: 'PhP'),
+                LinearChart(width: 280, percentage: '90%', title: 'Cooking'),
+                LinearChart(width: 220, percentage: '65%', title: 'Marketing'),
+              ],
+            )
           ],
         ),
       ),

@@ -7,6 +7,7 @@ import 'package:portfolio/widgets/custom_text.dart';
 import 'package:portfolio/widgets/experience_tile.dart';
 import 'package:portfolio/widgets/intro_text_row.dart';
 import 'package:portfolio/widgets/intro_tile.dart';
+import 'package:portfolio/widgets/linear_chart.dart';
 import 'package:portfolio/widgets/title_text.dart';
 
 class IntroductionSection extends StatelessWidget {
@@ -188,9 +189,9 @@ class IntroductionSection extends StatelessWidget {
               height: 50,
             ),
             Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Expanded(
-                    flex: 3,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
@@ -199,15 +200,15 @@ class IntroductionSection extends StatelessWidget {
                           fontSize: 30,
                           fontWeight: FontWeight.bold,
                         ),
-                        ExperienceTile(title:'2015',text:Constants.text),
-                        ExperienceTile(title:'2015',text:Constants.text),
-                        ExperienceTile(title:'2015',text:Constants.text),
-                        ExperienceTile(title:'2015',text:Constants.text),
-                        ExperienceTile(title:'2015',text:Constants.text,isLast:true),
+                        ExperienceTile(title: '2015', text: Constants.text),
+                        ExperienceTile(title: '2015', text: Constants.text),
+                        ExperienceTile(title: '2015', text: Constants.text),
+                        ExperienceTile(title: '2015', text: Constants.text),
+                        ExperienceTile(
+                            title: '2015', text: Constants.text, isLast: true),
                       ],
                     )),
                 Expanded(
-                    flex: 2,
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: const [
@@ -215,10 +216,41 @@ class IntroductionSection extends StatelessWidget {
                             text: 'Cover letter',
                             fontSize: 30,
                             fontWeight: FontWeight.bold,
-                          )
+                          ),
+                          TitleText(
+                            text:
+                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra tristique placerat in massa consectetur quisque nunc fames',
+                            fontSize: 22.0,
+                          ),
+                          SizedBox(height: 30,),
+                          CustomText(
+                            text:
+                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra tristique placerat in massa consectetur quisque. Nunc ac fames lectus in libero aliquet. Mauris egestas nulla arcu, ut vestibulum diam vulputate non. Ut massa mauris, condimentum ut tincidunt eu, mattis euismod dolor.',
+                            fontSize: 20,
+                          ),
+                          SizedBox(height: 30,),
+                          CustomText(
+                            text:
+                                'Faucibus sed tristique fames sed aliquet ultricies eget viverra arcu. Vitae faucibus diam consequat maecenas. Turpis metus sit diam purus leo in varius ac quam. Nunc amet tristique volutpat adipiscing vulputate phasellus. Volutpat faucibus sed condimentum aliquet mi, nec lobortis neque gravida tempor.',
+                            fontSize: 20.0,
+                          ),
+                          SizedBox(height: 30,),
+                          CustomText(
+                            text:
+                                'Faucibus sed tristique fames sed aliquet ultricies eget viverra arcu. Vitae faucibus diam consequat maecenas. Turpis metus sit diam purus leo in varius ac quam. Nunc amet tristique volutpat adipiscing vulputate phasellus. Volutpat faucibus sed condimentum aliquet mi, nec lobortis neque gravida tempor.',
+                            fontSize: 20.0,
+                          ),
                         ])),
               ],
-            )
+            ),
+            const SizedBox(
+              height: 50,
+            ),
+const TitleText(text: 'Skills'),
+            LinearChart(width: 200, percentage: '50%', title: 'Creativity'),
+            LinearChart(width: 250, percentage: '70%', title: 'PhP'),
+            LinearChart(width: 280, percentage: '90%', title: 'Cooking'),
+            LinearChart(width: 220, percentage: '65%', title: 'Marketing'),
           ],
         ),
       ),

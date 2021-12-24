@@ -17,8 +17,8 @@ class DesktopDrawer extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Padding(
-                padding: const EdgeInsets.only(right: 8.0),
+              const Padding(
+                padding: EdgeInsets.only(right: 8.0),
                 child: Text(
                   '01',
                   style: TextStyle(
@@ -30,8 +30,8 @@ class DesktopDrawer extends StatelessWidget {
                 height: 5,
                 color: AppColors.whiteColor,
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 8.0),
+              const Padding(
+                padding: EdgeInsets.only(left: 8.0),
                 child: Text(
                   '06',
                   style: TextStyle(

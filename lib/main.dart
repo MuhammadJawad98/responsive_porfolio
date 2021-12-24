@@ -86,7 +86,7 @@ class MainScreen extends StatelessWidget {
                 child: Container(
                   width: double.infinity,
                   height: double.infinity,
-                  color: AppColors.greyColor,
+                  color: AppColors.greyDarkColor,
                   padding: const EdgeInsets.only(top: 150.0),
                   child: const DesktopDrawer(),
                 )),

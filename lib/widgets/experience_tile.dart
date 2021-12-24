@@ -17,10 +17,16 @@ final bool isLast;
 
 class _ExperienceTileState extends State<ExperienceTile> {
   bool isHovered = false;
+  double leftPadding=50.0;
 
   hoverActivation(hoverState) {
     setState(() {
       isHovered = hoverState;
+      if(hoverState){
+        leftPadding=25.0;
+      }else{
+        leftPadding=50.0;
+      }
     });
   }
 
@@ -36,7 +42,12 @@ class _ExperienceTileState extends State<ExperienceTile> {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-           TitleText(text: widget.title),
+           SizedBox(width: 100,
+             child: Padding(
+               padding: EdgeInsets.only(left: leftPadding),
+               child: TitleText(text: widget.title, ),
+             ),
+           ),
           Expanded(
               flex: 1,
               child: Column(

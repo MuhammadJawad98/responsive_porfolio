@@ -1,15 +1,16 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio/utils/colors.dart';
-import 'package:portfolio/utils/constants.dart';
-import 'package:portfolio/widgets/custom_button.dart';
-import 'package:portfolio/widgets/custom_image_tile.dart';
-import 'package:portfolio/widgets/custom_text.dart';
-import 'package:portfolio/widgets/experience_tile.dart';
-import 'package:portfolio/widgets/intro_text_row.dart';
-import 'package:portfolio/widgets/intro_tile.dart';
-import 'package:portfolio/widgets/linear_chart.dart';
-import 'package:portfolio/widgets/title_text.dart';
+import '../../utils/colors.dart';
+import '../../utils/constants.dart';
+import '../../widgets/contact_form.dart';
+import '../../widgets/custom_button.dart';
+import '../../widgets/custom_image_tile.dart';
+import '../../widgets/custom_text.dart';
+import '../../widgets/experience_tile.dart';
+import '../../widgets/intro_text_row.dart';
+import '../../widgets/intro_tile.dart';
+import '../../widgets/linear_chart.dart';
+import '../../widgets/title_text.dart';
+import '../../widgets/custom_space.dart';
 
 class IntroductionSection extends StatelessWidget {
   const IntroductionSection({Key? key}) : super(key: key);
@@ -28,7 +29,7 @@ class IntroductionSection extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(
+            const CustomSpace(
               height: 80,
             ),
             Row(
@@ -45,7 +46,7 @@ class IntroductionSection extends StatelessWidget {
                         fontSize: 30,
                         fontWeight: FontWeight.w700,
                       ),
-                      const SizedBox(
+                      const CustomSpace(
                         height: 20,
                       ),
                       const TitleText(
@@ -54,13 +55,13 @@ class IntroductionSection extends StatelessWidget {
                         fontSize: 22,
                         fontWeight: FontWeight.w400,
                       ),
-                      const SizedBox(
+                      const CustomSpace(
                         height: 20,
                       ),
                       const CustomText(
                           text:
                               'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra tristique placerat in massa consectetur quisque. Nunc ac fames lectus in libero aliquet tellus pharetra erat tristique erat donec dignissim etiam sed malesik enim sodales lorem ipsum donac.'),
-                      const SizedBox(
+                      const CustomSpace(
                         height: 50,
                       ),
                       const IntroTextRow(title: 'NAME:', text: 'Jacob Hawkins'),
@@ -78,7 +79,7 @@ class IntroductionSection extends StatelessWidget {
                         onPress: () {},
                         height: 60,
                         width: 100,
-                        buttonColor: const Color(0xff2F2E38),
+                        buttonColor:AppColors.greyDarkColor,
                       ),
                       CustomRoundButton(
                         text: 'Check my Portfolio',
@@ -135,7 +136,7 @@ class IntroductionSection extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(
+            const CustomSpace(
               height: 80,
             ),
             Row(
@@ -145,14 +146,14 @@ class IntroductionSection extends StatelessWidget {
                   imgUrl: Constants.image1,
                   text: 'Demo 1',
                 ),
-                SizedBox(
+                CustomSpace(
                   width: 50.0,
                 ),
                 CustomImageTile(
                   imgUrl: Constants.image2,
                   text: 'Demo 2',
                 ),
-                SizedBox(
+                CustomSpace(
                   width: 50.0,
                 ),
                 CustomImageTile(
@@ -161,7 +162,7 @@ class IntroductionSection extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(
+            const CustomSpace(
               height: 50,
             ),
             Row(
@@ -171,14 +172,14 @@ class IntroductionSection extends StatelessWidget {
                   imgUrl: Constants.image4,
                   text: 'Demo 4',
                 ),
-                SizedBox(
+                CustomSpace(
                   width: 50.0,
                 ),
                 CustomImageTile(
                   imgUrl: Constants.image5,
                   text: 'Demo 5',
                 ),
-                SizedBox(
+                CustomSpace(
                   width: 50.0,
                 ),
                 CustomImageTile(
@@ -187,7 +188,7 @@ class IntroductionSection extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(
+            const CustomSpace(
               height: 50,
             ),
             Row(
@@ -224,7 +225,7 @@ class IntroductionSection extends StatelessWidget {
                             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra tristique placerat in massa consectetur quisque nunc fames',
                         fontSize: 22.0,
                       ),
-                      SizedBox(
+                      CustomSpace(
                         height: 30,
                       ),
                       CustomText(
@@ -232,7 +233,7 @@ class IntroductionSection extends StatelessWidget {
                             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra tristique placerat in massa consectetur quisque. Nunc ac fames lectus in libero aliquet. Mauris egestas nulla arcu, ut vestibulum diam vulputate non. Ut massa mauris, condimentum ut tincidunt eu, mattis euismod dolor.',
                         fontSize: 20,
                       ),
-                      SizedBox(
+                      CustomSpace(
                         height: 30,
                       ),
                       CustomText(
@@ -240,7 +241,7 @@ class IntroductionSection extends StatelessWidget {
                             'Faucibus sed tristique fames sed aliquet ultricies eget viverra arcu. Vitae faucibus diam consequat maecenas. Turpis metus sit diam purus leo in varius ac quam. Nunc amet tristique volutpat adipiscing vulputate phasellus. Volutpat faucibus sed condimentum aliquet mi, nec lobortis neque gravida tempor.',
                         fontSize: 20.0,
                       ),
-                      SizedBox(
+                      CustomSpace(
                         height: 30,
                       ),
                       CustomText(
@@ -251,7 +252,7 @@ class IntroductionSection extends StatelessWidget {
                     ])),
               ],
             ),
-            const SizedBox(
+            const CustomSpace(
               height: 50,
             ),
             const TitleText(
@@ -264,10 +265,75 @@ class IntroductionSection extends StatelessWidget {
               children: const [
                 LinearChart(width: 200, percentage: '50%', title: 'Creativity'),
                 LinearChart(width: 250, percentage: '70%', title: 'PhP'),
-                LinearChart(width: 280, percentage: '90%', title: 'Cooking'),
+                LinearChart(width: 270, percentage: '90%', title: 'Cooking'),
                 LinearChart(width: 220, percentage: '65%', title: 'Marketing'),
               ],
-            )
+            ),
+            const CustomSpace(
+              height: 50,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 5.0, right: 20.0),
+              child: Row(
+                children: [
+                  Expanded(
+                      flex: 3,
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          // mainAxisAlignment: MainAxisAlignment.start,
+                          children: const [
+                            TitleText(
+                              text: 'Get in touch',
+                              fontWeight: FontWeight.bold,
+                              fontSize: 30,
+                            ),
+                            CustomSpace(
+                              height: 30,
+                            ),
+                            TitleText(
+                              text:
+                                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra tristique placerat in massa consectetur quisque nunc fames.',
+                              fontSize: 22,
+                            ),
+                            CustomSpace(
+                              height: 30,
+                            ),
+                            CustomText(
+                                text:
+                                    'Magni dolores eos qui sed quia consequuntur ratione voluptatem sequi nesciunt permano Nence of the stars from which we spring muse about as a patch of light billions upon billions.'),
+                            CustomSpace(
+                              height: 30,
+                            ),
+                            CustomText(
+                                text:
+                                    'Energy hidden in matter a mote of lorem ipsum dust suspended in a sunbeam billions upon ratione voluptatem sequi nesciunt permano lorem ipsum.'),
+                            CustomSpace(
+                              height: 30,
+                            ),
+                            IntroTextRow(
+                                title: 'ADDRESS :',
+                                text: 'Some Street 987, USA'),
+                            IntroTextRow(
+                                title: 'EMAIL :      ',
+                                text: 'company@youremail.com'),
+                            IntroTextRow(
+                                title: 'WEBSITE : ',
+                                text: 'www.yourwebsite.com'),
+                          ],
+                        ),
+                      )),
+                  const Expanded(
+                    flex: 5,
+                    child: ContactForm(),
+                  ),
+                ],
+              ),
+            ),
+            const CustomSpace(
+              height: 50,
+            ),
           ],
         ),
       ),

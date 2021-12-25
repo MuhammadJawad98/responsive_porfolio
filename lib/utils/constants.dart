@@ -1,5 +1,11 @@
 class Constants {
 //https://demo.cocobasic.com/volos-wp/demo-3/
+  //TextFormFieldType
+  static const int nameField = 1;
+  static const int emailField = 2;
+  static const int subjectField = 3;
+  static const int messageField = 4;
+
   static const String bgImage =
       // 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fHRlY2hub2xvZ3l8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60';
       'https://images.unsplash.com/photo-1576400883215-7083980b6193?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzd8fHRlY2hub2xvZ3l8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60';

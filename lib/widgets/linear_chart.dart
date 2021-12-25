@@ -45,10 +45,13 @@ crossAxisAlignment: CrossAxisAlignment.start,
                   ),
                 ],
               )),
-          TitleText(
-            text: percentage,
-            fontSize: 45,
-            fontWeight: FontWeight.bold,
+          Padding(
+            padding: const EdgeInsets.only(left:10.0),
+            child: TitleText(
+              text: percentage,
+              fontSize: 45,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ],
       ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/utils/colors.dart';
-import 'package:portfolio/widgets/title_text.dart';
+import '../utils/colors.dart';
+import '../widgets/title_text.dart';
 
 import 'custom_text.dart';
 
@@ -39,52 +39,54 @@ class _ExperienceTileState extends State<ExperienceTile> {
       onExit: (event) {
         hoverActivation(false);
       },
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-           SizedBox(width: 100,
-             child: Padding(
-               padding: EdgeInsets.only(left: leftPadding),
-               child: TitleText(text: widget.title, ),
+      child: SizedBox(width: MediaQuery.of(context).size.width/2,
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+             SizedBox(width: 100,
+               child: Padding(
+                 padding: EdgeInsets.only(left: leftPadding),
+                 child: TitleText(text: widget.title, ),
+               ),
              ),
-           ),
-          Expanded(
-              flex: 1,
-              child: Column(
-                children: [
-                  Container(
-                    width: 35,
-                    height: 35,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      border: Border.all(
-                        width: 3,
-                        color: AppColors.greenColor,
+            Expanded(
+                flex: 1,
+                child: Column(
+                  children: [
+                    Container(
+                      width: 35,
+                      height: 35,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(
+                          width: 3,
+                          color: AppColors.greenColor,
+                        ),
                       ),
+                      child: isHovered
+                          ? Center(
+                              child: Container(
+                              width: 20,
+                              height: 20,
+                              decoration: const BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: AppColors.greenColor,
+                              ),
+                            ))
+                          : null,
                     ),
-                    child: isHovered
-                        ? Center(
-                            child: Container(
-                            width: 20,
-                            height: 20,
-                            decoration: const BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: AppColors.greenColor,
-                            ),
-                          ))
-                        : null,
-                  ),
-                  const SizedBox(height: 20),
-                if(!widget.isLast) Container(
-                    width: 5,
-                    height: 150,
-                    color: AppColors.greenColor,
-                  ),
-                  const SizedBox(height: 20),
-                ],
-              )),
-           Expanded(flex: 3, child: CustomText(text: widget.text)),
-        ],
+                    const SizedBox(height: 20),
+                  if(!widget.isLast) Container(
+                      width: 5,
+                      height: 150,
+                      color: AppColors.greenColor,
+                    ),
+                    const SizedBox(height: 20),
+                  ],
+                )),
+             Expanded(flex: 3, child: CustomText(text: widget.text)),
+          ],
+        ),
       ),
     );
   }

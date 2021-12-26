@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/utils/colors.dart';
-import 'package:portfolio/utils/constants.dart';
-import 'package:portfolio/widgets/custom_button.dart';
-import 'package:portfolio/widgets/title_text.dart';
+import '../../utils/colors.dart';
+import '../../utils/constants.dart';
+import '../../widgets/custom_button.dart';
+import '../../widgets/title_text.dart';
 
 class ImageContainer extends StatelessWidget {
   const ImageContainer({Key? key}) : super(key: key);

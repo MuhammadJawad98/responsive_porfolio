@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/widgets/custom_text.dart';
-import 'package:portfolio/widgets/title_text.dart';
+import '../widgets/custom_text.dart';
+import '../widgets/title_text.dart';
 
 class IntroTextRow extends StatelessWidget {
   const IntroTextRow({Key? key, required this.title, required this.text})

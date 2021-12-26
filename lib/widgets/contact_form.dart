@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
-import 'package:portfolio/controllers/contact_form_controller.dart';
-import 'package:portfolio/utils/colors.dart';
-import 'package:portfolio/utils/constants.dart';
-import 'package:portfolio/widgets/custom_form_button.dart';
-import 'package:portfolio/widgets/custom_text_form_field.dart';
+import '../controllers/contact_form_controller.dart';
+import '../utils/colors.dart';
+import '../utils/constants.dart';
+import '../widgets/custom_form_button.dart';
+import '../widgets/custom_text_form_field.dart';
 
 class ContactForm extends StatelessWidget {
   const ContactForm({Key? key}) : super(key: key);

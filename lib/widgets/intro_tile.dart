@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/widgets/custom_text.dart';
-import 'package:portfolio/widgets/title_text.dart';
+import '../widgets/custom_text.dart';
+import '../widgets/title_text.dart';
 
 class IntroTile extends StatelessWidget {
   const IntroTile(

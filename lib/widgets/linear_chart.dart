@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio/utils/colors.dart';
-import 'package:portfolio/widgets/title_text.dart';
+import '../utils/colors.dart';
+import '../widgets/title_text.dart';
 
 class LinearChart extends StatelessWidget {
   const LinearChart(

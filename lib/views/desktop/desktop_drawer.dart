@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/utils/colors.dart';
-import 'package:portfolio/widgets/custom_text.dart';
-import 'package:portfolio/widgets/title_text.dart';
+import '../../utils/colors.dart';
+import '../../widgets/custom_text.dart';
+import '../../widgets/title_text.dart';
 
 class DesktopDrawer extends StatelessWidget {
   const DesktopDrawer({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -46,19 +45,19 @@ class DesktopDrawer extends StatelessWidget {
           const TitleText(
             text: 'Name',
           ),
-          const CustomText(text: 'Jacob Hawkins'),
+          const CustomText(text: 'Muhammad Jawad'),
           const TitleText(
             text: 'Role',
           ),
-          const CustomText(text: 'Designer'),
+          const CustomText(text: 'Flutter developer'),
           const TitleText(
             text: 'Email',
           ),
-          const CustomText(text: 'stone@example.com'),
+          const CustomText(text: 'rana.jawad98@gmail.com'),
           const TitleText(
             text: 'Phone',
           ),
-          const CustomText(text: '(+987) 987 654 321'),
+          const CustomText(text: '+92 3024043814'),
         ],
       ),
     );

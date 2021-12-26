@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/utils/colors.dart';
-import 'package:portfolio/widgets/custom_text.dart';
+import '../utils/colors.dart';
+import '../widgets/custom_text.dart';
 class CustomFormButton extends StatelessWidget {
   const CustomFormButton({Key? key,required this.onTap}) : super(key: key);
 final VoidCallback onTap;

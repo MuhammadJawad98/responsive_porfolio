@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:portfolio/services/api_calling.dart';
-import 'package:portfolio/utils/common_functions.dart';
+import '../services/api_calling.dart';
+import '../utils/common_functions.dart';
 
 class ContactFormController extends GetxController {
   final nameController = TextEditingController();

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/utils/colors.dart';
-import 'package:portfolio/utils/constants.dart';
-import 'package:portfolio/widgets/custom_text.dart';
+import '../widgets/custom_text.dart';
 
 class CustomImageTile extends StatefulWidget {
   const CustomImageTile({Key? key, required this.imgUrl, required this.text})
@@ -14,46 +12,60 @@ class CustomImageTile extends StatefulWidget {
 }
 
 class _CustomImageTileState extends State<CustomImageTile>
-    with TickerProviderStateMixin {
-  bool isHovered = false;
-
-  hoverActivation(hoverState) {
-    setState(() {
-      isHovered = hoverState;
-    });
-  }
+    // with TickerProviderStateMixin
+{
+  // bool isHovered = false;
+  // hoverActivation(hoverState) {
+  //   setState(() {
+  //     isHovered = hoverState;
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
+    return Column(
       children: [
         Image.network(
           widget.imgUrl,
-          fit: BoxFit.fill,
+          fit: BoxFit.cover,
           width: 350,
-          height: 350,
+          height: 700,
         ),
-        MouseRegion(
-          onEnter: (event) {
-            hoverActivation(true);
-          },
-          onExit: (event) {
-            hoverActivation(false);
-          },
-          child: AnimatedContainer(
-            width: 350,
-            height: 350,
-            child: Align(
-              alignment: Alignment.bottomLeft,
-              child: CustomText(
-                text: isHovered ? widget.text : '',
-              ),
-            ),
-            duration: const Duration(milliseconds: 200),
-            color: isHovered ? AppColors.greenColor : null,
-          ),
-        )
+        CustomText(
+          text: widget.text,
+          fontSize: 30,
+        ),
       ],
     );
+    // return Stack(
+    //   children: [
+    //     Image.network(
+    //       widget.imgUrl,
+    //       fit: BoxFit.cover,
+    //       width: 350,
+    //       height: 350,
+    //     ),
+    //     MouseRegion(
+    //       onEnter: (event) {
+    //         hoverActivation(true);
+    //       },
+    //       onExit: (event) {
+    //         hoverActivation(false);
+    //       },
+    //       child: AnimatedContainer(
+    //         width: 350,
+    //         height: 350,
+    //         child: Align(
+    //           alignment: Alignment.bottomLeft,
+    //           child: CustomText(
+    //             text: isHovered ? '- ${widget.text}' : '',fontSize: 25.0,
+    //           ),
+    //         ),
+    //         duration: const Duration(milliseconds: 200),
+    //         color: isHovered ? AppColors.greenColor : null,
+    //       ),
+    //     )
+    //   ],
+    // );
   }
 }

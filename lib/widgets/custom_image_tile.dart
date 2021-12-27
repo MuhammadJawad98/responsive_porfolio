@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import '../widgets/custom_text.dart';
 
@@ -25,7 +26,7 @@ class _CustomImageTileState extends State<CustomImageTile>
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Image.network(
+        CachedNetworkImage(imageUrl:
           widget.imgUrl,
           fit: BoxFit.cover,
           width: 350,

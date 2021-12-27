@@ -5,9 +5,9 @@ import '../widgets/title_text.dart';
 
 class LinearChart extends StatelessWidget {
   const LinearChart(
-      {Key? key, required this.width, required this.percentage, required this.title})
+      {Key? key, required this.percent, required this.percentage, required this.title})
       : super(key: key);
-  final double width;
+  final double percent;
   final String percentage;
   final String title;
 
@@ -33,7 +33,7 @@ crossAxisAlignment: CrossAxisAlignment.start,
                         ),
                       ),
                       Container(
-                        width: width,
+                        width: (percent/100)*400,
                         height: 30,
                         color: AppColors.greenColor,
                       ),

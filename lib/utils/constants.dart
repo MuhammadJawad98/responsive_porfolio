@@ -1,3 +1,7 @@
+import 'package:portfolio/models/experience.dart';
+import 'package:portfolio/models/projects_data.dart';
+import 'package:portfolio/models/skills.dart';
+
 class Constants {
 //https://demo.cocobasic.com/volos-wp/demo-3/
   //TextFormFieldType
@@ -28,4 +32,39 @@ class Constants {
 
   static const String text =
       '2015 - 2017 Turpis metus sit diam purus leo in varius ac quam. Nunc amet tristique volutpat adipiscing vulputate phasellus. Eget enim aliquam euismod mauris in vitae viverra blandit lectus diam feugiat. Nunc amet tristique volutpat adipiscing vulputate phasellus. Eget enim aliquam.';
+
+static List<Projects> projectData=[
+  Projects(name: 'Niffty', imageUrl: projectNiffty, description: ''),
+  Projects(name: 'NeighbourHub.de', imageUrl: projectNeighbourHub, description: ''),
+  Projects(name: 'GearsUnlimited', imageUrl: projectGearsUnlimited, description: ''),
+  Projects(name: 'FacebookClone', imageUrl: projectFacebookClone, description: ''),
+  Projects(name: 'Popeye', imageUrl: projectPopeye, description: ''),
+  Projects(name: 'Mizdah', imageUrl: projectMizdah, description: ''),
+];
+
+static List<Skills> skills=[
+  Skills(percent: 70, percentage: '70%', title: 'Java'),
+  Skills(percent: 65, percentage: '65%', title: 'Dart'),
+  Skills(percent: 50, percentage: '50%', title: 'Android'),
+  Skills(percent: 65, percentage: '65%', title: 'Flutter'),
+  Skills(percent: 40, percentage: '40%', title: 'React native'),
+];
+
+static const String nifftyDesc='08/2020 to 09/2020. Niffy provides you with a book for the worker for a specific task. Also, a user can work as an employer by adding his/her profile. My role is to make this app UI. It includes activities, fragments, maps, SQLite, google login, Facebook login, Intents, and many more components.';
+static const String neighbourhubDesc='11/2020 to 02/2021. Neighbourhub.de is an ecommerce project made on Flutter. Works as e-commerce for multiple vendors. My role is to customize it for their eCommerce website. API integration, UI modifications, google Facebook login integration, Firebase authentications, and adding new features are part of my role.';
+static const String gearsUnlimitedDesc='10/2020 to 10/2020. Gears Unlimited is an android based app, an e-commerce platform for selling music instruments. Including selling purchasing also having events creation. My role is to add the comments section by using their API and also some UI modifications.';
+static const String facebookDesc='03/2021 to 03/2021. During my professional career. I start taking interest in flutter. How it works? What can we do with flutter. So then i start making a clone of facebook but its a static page with all the basic functionality like post creation etc.';
+static const String popeyeDesc='07/2020 to 08/2020. Popeye is an arabic food ordering app that allow user to order yummy fast food with awesome offers. My role is to resolve bugs like Facebook login, UI updating, data parsing, language change issues, SSL certifications, etc.';
+static const String mizdahDesc='10/2021 to Continue. Mizdah is a secure, reliable, and high-performance video conferencing and online meeting solution. This app is based on flutter with webrtc feature. My role is to build it from scratch, integrating APIs and webrtc.';
+static const String ablohDesc='04/2021 to 09/2021. Abloh is a social media type app. Build in React Native. My role is to work in the reat native team to support them by fixing the bugs and UI responsiveness. During this project i learn a-lot about javascript, it weird behaviours and some core concepts. ';
+static List<Experience> experienceList=[
+  Experience(year: '2020', description: popeyeDesc,isLast:false,),
+  Experience(year: '2020', description: nifftyDesc,isLast:false,),
+  Experience(year: '2020', description: gearsUnlimitedDesc,isLast:false,),
+  Experience(year: '2021', description: neighbourhubDesc,isLast:false,),
+  Experience(year: '2021', description: facebookDesc,isLast:false,),
+  Experience(year: '2021', description: ablohDesc,isLast:false,),
+  Experience(year: '2021', description: mizdahDesc,isLast:true,),
+];
+
 }

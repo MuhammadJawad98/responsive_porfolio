@@ -37,7 +37,7 @@ class LoadingScreen extends StatelessWidget {
   const LoadingScreen({Key? key}) : super(key: key);
 
   void goToMainPage() {
-    Future.delayed(const Duration(seconds: 5), () {
+    Future.delayed(const Duration(seconds: 3), () {
       Get.toNamed(
         RoutesName.portfolio,
       );

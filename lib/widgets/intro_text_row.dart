@@ -12,7 +12,12 @@ class IntroTextRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Wrap(
       direction: Axis.horizontal,
-      children: [TitleText(text: title,fontWeight: FontWeight.bold,), CustomText(text: text)],
+      children: [
+        SizedBox(
+            width: 100,
+            child: TitleText(text: title, fontWeight: FontWeight.bold,)),
+        CustomText(text: text)
+      ],
     );
   }
 }

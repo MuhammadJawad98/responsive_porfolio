@@ -29,13 +29,13 @@ class GetInTouchView extends StatelessWidget {
           CustomSpace(
             height: 30,
           ),
-          IntroTextRow(
-              title: 'ADDRESS :', text: 'Some Street 987, USA'),
+          // IntroTextRow(
+          //     title: 'ADDRESS :', text: 'Opposite General Hospital Lahore'),
           IntroTextRow(
               title: 'EMAIL :      ',
-              text: 'company@youremail.com'),
+              text: 'rana.jawad98@gmail.com'),
           IntroTextRow(
-              title: 'WEBSITE : ', text: 'www.yourwebsite.com'),
+              title: 'WEBSITE : ', text: 'www.muhammadjawad98.github.io'),
         ],
       ),
     );

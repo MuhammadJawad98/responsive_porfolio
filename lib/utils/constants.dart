@@ -1,6 +1,9 @@
+import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:portfolio/models/experience.dart';
 import 'package:portfolio/models/projects_data.dart';
 import 'package:portfolio/models/skills.dart';
+import 'package:portfolio/models/social_media.dart';
+import 'package:portfolio/utils/colors.dart';
 
 class Constants {
 //https://demo.cocobasic.com/volos-wp/demo-3/
@@ -127,4 +130,63 @@ class Constants {
   static const String githubUrl = 'https://github.com/MuhammadJawad98';
   static const String resumeLink =
       'https://drive.google.com/file/d/1oWiwxYFLb552PfKlciyowoaC2Hq59L-z/view?usp=sharing';
+
+  static const String hiIAmJawadText = 'Hi, I\'m \nMuhammad Jawad';
+  static const String buildValueText = 'I build value through design.';
+  static const String buildProductText =
+      'I\'m a Pakistani who loves building digital products.';
+  static const String introduceText = 'Introduce';
+  static const String intro =
+      'Hi, my name is Muhammad Jawad. Graduated as a computer science student from University of Education, Lahore.';
+  static const String introDescription =
+      'I started my career as an Android developer. Working on different projects fixing bugs , adding new features & updating Ui are part of my role. Then i start learning Flutter which create a-lot of interest in it. Its simplicity and flexibility makes me Flutter FAN. Then started my career as an Flutter developer. Working on different projects like e-commerce, educational apps and currently working on group conferencing app like zoom.';
+  static const String downloadCv = 'Download CV';
+  static const String myPortfolio = 'My Portfolio';
+  static const String projects = 'Projects';
+  static const String experience = 'Experience';
+  static const String text2020 = '2020';
+  static const String text2021 = '2021';
+  static const String skillsText = 'Skills';
+  static const String projectHighlights = 'Projects Highlights';
+  static const String instagram = 'Instagram';
+  static const String youtube = 'Youtube';
+  static const String github = 'Github';
+  static const String facebook = 'Facebook';
+  static const String twitter = 'Twitter';
+  static const String linkedin = 'Linkedin';
+  static const String copyrighttext =
+      'Copyright © 2021 Muhammad Jawad • Mobile App Developer';
+
+  static List<SocialMedia> socialMediaList = [
+    SocialMedia(
+        icon: AntDesign.instagram,
+        text: Constants.instagram,
+        iconColor: AppColors.instaColor,
+        url: Constants.instaUrl),
+    SocialMedia(
+        icon: Entypo.youtube,
+        text: Constants.youtube,
+        iconColor: AppColors.youtubeColor,
+        url: Constants.youtubeUrl),
+    SocialMedia(
+        icon: AntDesign.github,
+        text: Constants.github,
+        iconColor: AppColors.blackColor,
+        url: Constants.githubUrl),
+    SocialMedia(
+        icon: FontAwesome.facebook,
+        text: Constants.facebook,
+        iconColor: AppColors.fbColor,
+        url: Constants.facebookUrl),
+    SocialMedia(
+        icon: Entypo.twitter,
+        text: Constants.twitter,
+        iconColor: AppColors.twitterColor,
+        url: Constants.twitterUrl),
+    SocialMedia(
+        icon: Entypo.linkedin,
+        text: Constants.linkedin,
+        iconColor: AppColors.linkedinColor,
+        url: Constants.linkedinUrl),
+  ];
 }

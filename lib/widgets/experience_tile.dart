@@ -81,7 +81,7 @@ class _ExperienceTileState extends State<ExperienceTile> {
                     const SizedBox(height: 20),
                   if(!widget.isLast) Container(
                       width: 5,
-                      height: 100,
+                      height: 150,
                       color: AppColors.greenColor,
                     ),
                     const SizedBox(height: 20),

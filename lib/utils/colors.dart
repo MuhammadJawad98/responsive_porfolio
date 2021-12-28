@@ -7,7 +7,7 @@ class AppColors{
   static const Color whiteColor = Color(0Xffffffff);
   static const Color blackColor = Color(0Xff000000);
   static const Color transparentColor = Colors.transparent;
-  static const Color instaColor = Colors.purpleAccent;
+  static const Color instaColor = Color(0Xff8a3ab9);
   static const Color fbColor = Color(0Xff3b5998);
   static const Color youtubeColor = Color(0XFFFF0000);
   static const Color twitterColor = Color(0XFF00acee);

@@ -18,7 +18,6 @@ final bool isLast;
 class _ExperienceTileState extends State<ExperienceTile> {
   bool isHovered = false;
   double leftPadding=50.0;
-
   hoverActivation(hoverState) {
     setState(() {
       isHovered = hoverState;
@@ -32,6 +31,8 @@ class _ExperienceTileState extends State<ExperienceTile> {
 
   @override
   Widget build(BuildContext context) {
+    // var width=MediaQuery.of(context).size.width;
+
     return MouseRegion(
       onEnter: (event) {
         hoverActivation(true);
@@ -39,8 +40,10 @@ class _ExperienceTileState extends State<ExperienceTile> {
       onExit: (event) {
         hoverActivation(false);
       },
-      child: SizedBox(width: MediaQuery.of(context).size.width/2,
-        child: Row(
+      child:
+      // SizedBox(width: MediaQuery.of(context).size.width/2,
+      //   child:
+      Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
              SizedBox(width: 100,
@@ -78,16 +81,18 @@ class _ExperienceTileState extends State<ExperienceTile> {
                     const SizedBox(height: 20),
                   if(!widget.isLast) Container(
                       width: 5,
-                      height: 150,
+                      height: 100,
                       color: AppColors.greenColor,
                     ),
                     const SizedBox(height: 20),
                   ],
                 )),
-             Expanded(flex: 3, child: CustomText(text: widget.text)),
+             Expanded(
+                 flex: 3,
+                 child: CustomText(text: widget.text)),
           ],
         ),
-      ),
+      // ),
     );
   }
 }

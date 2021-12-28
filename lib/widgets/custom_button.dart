@@ -52,7 +52,7 @@ class _CustomRoundButtonState extends State<CustomRoundButton> {
                   widget.buttonColor = AppColors.greenColor;
                   widget.textColor = AppColors.whiteColor;
                 }else{
-                  widget.buttonColor = AppColors.greyColor;
+                  widget.buttonColor = AppColors.greyDarkColor;
                   widget.textColor = AppColors.whiteColor;
                 }
 
@@ -72,7 +72,7 @@ class _CustomRoundButtonState extends State<CustomRoundButton> {
                   widget.isRounded ? widget.roundCornersRadius : 0),
             ),
           ),
-          child: Text(widget.text)),
+          child: Text(widget.text,)),
     );
   }
 }

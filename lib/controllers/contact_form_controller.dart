@@ -9,7 +9,6 @@ class ContactFormController extends GetxController {
   final emailController = TextEditingController();
   final subjectController = TextEditingController();
   final messageController = TextEditingController();
-  final formKey = GlobalKey<FormState>();
 
   @override
   void dispose() {
@@ -27,7 +26,7 @@ class ContactFormController extends GetxController {
     super.onInit();
   }
 
-  Future<void> sendEmail(context) async {
+  Future<void> sendEmail(formKey,context) async {
     if (formKey.currentState!.validate()) {
       formKey.currentState!.save();
       var name = nameController.text;

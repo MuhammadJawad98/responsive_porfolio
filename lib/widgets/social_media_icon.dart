@@ -11,26 +11,22 @@ class SocialMediaIcon extends StatelessWidget {
   final VoidCallback onTap;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 200,
-      padding: const EdgeInsets.only(left: 8.0),
-      child: Column(
-        children: [
-          InkWell(
-            onTap: onTap,
-            child: CircleAvatar(
-              radius: 45,
-              backgroundColor: AppColors.whiteColor,
-              child: Icon(
-                icon,
-                color: iconColor,
-                size: 40,
-              ),
+    return Column(
+      children: [
+        InkWell(
+          onTap: onTap,
+          child: CircleAvatar(
+            radius: 30,
+            backgroundColor: AppColors.whiteColor,
+            child: Icon(
+              icon,
+              color: iconColor,
+              size: 25,
             ),
           ),
-          CustomText(text: text),
-        ],
-      ),
+        ),
+        CustomText(text: text),
+      ],
     );
   }
 }

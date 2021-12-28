@@ -10,7 +10,8 @@ class IntroTextRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return Wrap(
+      direction: Axis.horizontal,
       children: [TitleText(text: title,fontWeight: FontWeight.bold,), CustomText(text: text)],
     );
   }

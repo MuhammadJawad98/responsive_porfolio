@@ -12,6 +12,8 @@ class ContactForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final  formKey = GlobalKey<FormState>();
+
     return GetBuilder<ContactFormController>(
         init: ContactFormController(),
         builder: (_) {
@@ -20,7 +22,7 @@ class ContactForm extends StatelessWidget {
             color: AppColors.greenColor,
             padding: const EdgeInsets.all(20.0),
             child: Form(
-              key: _.formKey,
+              key: formKey,
               child: Column(
                 children: [
                   CustomTextFormField(
@@ -50,7 +52,7 @@ class ContactForm extends StatelessWidget {
                     height: 30,
                   ),
                   CustomFormButton(onTap: () {
-                    _.sendEmail(context);
+                    _.sendEmail(formKey,context);
                   }),
                   const SizedBox(
                     height: 30,

@@ -139,7 +139,7 @@ class Constants {
   static const String intro =
       'Hi, my name is Muhammad Jawad. Graduated as a computer science student from University of Education, Lahore.';
   static const String introDescription =
-      'I started my career as an Android developer. Working on different projects fixing bugs , adding new features & updating Ui are part of my role. Then i start learning Flutter which create a-lot of interest in it. Its simplicity and flexibility makes me Flutter FAN. Then started my career as an Flutter developer. Working on different projects like e-commerce, educational apps and currently working on group conferencing app like zoom.';
+      'I started my career as an Android developer. Working on different projects fixing bugs , adding new features & updating Ui are part of my role. Then i start learning Flutter which create a-lot of interest in it. Its simplicity and flexibility makes me Flutter FAN. Then started my career as an Flutter developer. Working on different projects like e-commerce, educational apps and currently working on group conferencing app.';
   static const String downloadCv = 'Download CV';
   static const String myPortfolio = 'My Portfolio';
   static const String projects = 'Projects';

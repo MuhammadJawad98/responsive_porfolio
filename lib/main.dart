@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:portfolio/views/mobile/mobile_content.dart';
+import 'package:url_strategy/url_strategy.dart';
+import '../views/mobile/mobile_content.dart';
 import '../routes/route_generator.dart';
 import '../routes/routes.dart';
 import '../utils/colors.dart';
@@ -10,6 +11,9 @@ import '../views/desktop/desktop_drawer.dart';
 import '../views/desktop/desktop_content.dart';
 
 void main() {
+  // Here we set the URL strategy for our web app.
+  // It is safe to call this function when running on mobile or desktop as well.
+  setPathUrlStrategy();
   runApp(const MyApp());
 }
 

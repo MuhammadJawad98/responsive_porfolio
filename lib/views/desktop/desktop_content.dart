@@ -1,15 +1,12 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:get/get.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:portfolio/views/desktop/details_section.dart';
-import 'package:portfolio/views/desktop/social_media_icons.dart';
-import 'package:portfolio/views/mobile/mobile_intro_section.dart';
-import 'package:portfolio/views/mobile/mobile_top_section.dart';
+import '../../views/desktop/details_section.dart';
+import '../../views/desktop/social_media_icons.dart';
+import '../../views/mobile/mobile_intro_section.dart';
 import '../../views/desktop/get_in_touch_view.dart';
 import '../../utils/common_functions.dart';
-import '../../widgets/social_media_icon.dart';
 import '../../utils/colors.dart';
 import '../../utils/constants.dart';
 import '../../widgets/contact_form.dart';
@@ -17,7 +14,6 @@ import '../../widgets/custom_button.dart';
 import '../../widgets/custom_image_tile.dart';
 import '../../widgets/custom_text.dart';
 import '../../widgets/experience_tile.dart';
-import '../../widgets/intro_text_row.dart';
 import '../../widgets/linear_chart.dart';
 import '../../widgets/title_text.dart';
 import '../../widgets/custom_space.dart';
@@ -69,81 +65,86 @@ class DesktopContent extends StatelessWidget {
                 ),
               ),
               Expanded(
-                  child: ClipRRect(
-                      borderRadius: BorderRadius.circular(20.0),
-                      child: Image.network(Constants.profileImage))),
+                child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20.0),
+                    child: Image.network(Constants.profileImage)),
+              ),
             ]),
           ),
           Padding(
             padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-            child:size.width<1100 ? MobileIntroSection(scrollController: scrollController) : Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+            child: size.width < 1100
+                ? MobileIntroSection(scrollController: scrollController)
+                : Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const TitleText(
-                        text: Constants.introduceText,
-                        fontSize: 30,
-                        fontWeight: FontWeight.w700,
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const TitleText(
+                              text: Constants.introduceText,
+                              fontSize: 30,
+                              fontWeight: FontWeight.w700,
+                            ),
+                            const CustomSpace(
+                              height: 20,
+                            ),
+                            const TitleText(
+                              text: Constants.intro,
+                              fontSize: 22,
+                              fontWeight: FontWeight.w400,
+                            ),
+                            const CustomSpace(
+                              height: 20,
+                            ),
+                            const CustomText(text: Constants.introDescription),
+                            const CustomSpace(
+                              height: 50,
+                            ),
+                            const DetailsSection(),
+                            const CustomSpace(
+                              height: 30,
+                            ),
+                            Wrap(
+                              direction: Axis.horizontal,
+                              children: [
+                                CustomRoundButton(
+                                  text: Constants.downloadCv,
+                                  onPress: () {
+                                    launchURL(Constants.resumeLink);
+                                  },
+                                  height: 60,
+                                  width: 100,
+                                  buttonColor: AppColors.greyDarkColor,
+                                ),
+                                CustomRoundButton(
+                                  text: Constants.myPortfolio,
+                                  onPress: () {
+                                    scrollController.animateTo(
+                                      scrollController.position.pixels + 150,
+                                      curve: Curves.easeOut,
+                                      duration:
+                                          const Duration(milliseconds: 300),
+                                    );
+                                  },
+                                  height: 60,
+                                  width: 100,
+                                  isActive: true,
+                                  buttonColor: AppColors.greenColor,
+                                  textColor: AppColors.whiteColor,
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
                       ),
-                      const CustomSpace(
-                        height: 20,
-                      ),
-                      const TitleText(
-                        text: Constants.intro,
-                        fontSize: 22,
-                        fontWeight: FontWeight.w400,
-                      ),
-                      const CustomSpace(
-                        height: 20,
-                      ),
-                      const CustomText(
-                        text:Constants.introDescription),
-                      const CustomSpace(height: 50,),
-                      const DetailsSection(),
-                      const CustomSpace(height: 30,),
-                      Wrap(
-                        direction: Axis.horizontal,
-                        children: [
-                          CustomRoundButton(
-                            text: Constants.downloadCv,
-                            onPress: () {
-                              launchURL(Constants.resumeLink);
-                            },
-                            height: 60,
-                            width: 100,
-                            buttonColor: AppColors.greyDarkColor,
-                          ),
-                          CustomRoundButton(
-                            text: Constants.myPortfolio,
-                            onPress: () {
-                              scrollController.animateTo(
-                                scrollController.position.pixels +
-                                    150,
-                                curve: Curves.easeOut,
-                                duration: const Duration(milliseconds: 300),
-                              );
-                            },
-                            height: 60,
-                            width: 100,
-                            isActive: true,
-                            buttonColor: AppColors.greenColor,
-                            textColor: AppColors.whiteColor,
-                          ),
-                        ],
-                      )
+                      Expanded(
+                          child: CachedNetworkImage(
+                              imageUrl: Constants.dummyImage)),
                     ],
                   ),
-                ),
-                Expanded(
-                    child: CachedNetworkImage(
-                        imageUrl:Constants.dummyImage
-                    )),
-              ],
-            ),
           ),
           const CustomSpace(
             height: 50,

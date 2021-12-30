@@ -24,7 +24,7 @@ class _GeneratePageRoute extends PageRouteBuilder {
 
   _GeneratePageRoute({required this.widget, required this.routeName})
       : super(
-            settings: RouteSettings(name: routeName),
+            // settings: RouteSettings(name: routeName),
             pageBuilder: (BuildContext context, Animation<double> animation,
                 Animation<double> secondaryAnimation) {
               return widget;

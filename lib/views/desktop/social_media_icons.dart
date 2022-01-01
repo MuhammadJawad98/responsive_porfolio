@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/utils/common_functions.dart';
-import 'package:portfolio/utils/constants.dart';
-import 'package:portfolio/widgets/social_media_icon.dart';
+import '../../utils/common_functions.dart';
+import '../../utils/constants.dart';
+import '../../widgets/social_media_icon.dart';
 
 class SocialMediaIconSection extends StatelessWidget {
   const SocialMediaIconSection({Key? key}) : super(key: key);

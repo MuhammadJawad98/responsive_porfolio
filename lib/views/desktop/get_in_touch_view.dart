@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/widgets/custom_space.dart';
-import 'package:portfolio/widgets/intro_text_row.dart';
-import 'package:portfolio/widgets/title_text.dart';
+import '../../widgets/custom_space.dart';
+import '../../widgets/intro_text_row.dart';
+import '../../widgets/title_text.dart';
 class GetInTouchView extends StatelessWidget {
   const GetInTouchView({Key? key}) : super(key: key);
 

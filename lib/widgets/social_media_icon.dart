@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/utils/colors.dart';
-import 'package:portfolio/widgets/custom_text.dart';
+import '../../utils/colors.dart';
+import '../../widgets/custom_text.dart';
 
 class SocialMediaIcon extends StatelessWidget {
   const SocialMediaIcon({Key? key, required this.icon, required this.text,required this.iconColor,required this.onTap})

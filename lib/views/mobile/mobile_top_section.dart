@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/utils/constants.dart';
-import 'package:portfolio/widgets/custom_text.dart';
-import 'package:portfolio/widgets/title_text.dart';
+import '../../utils/constants.dart';
+import '../../widgets/custom_text.dart';
+import '../../widgets/title_text.dart';
 
 class MobileTopSection extends StatelessWidget {
   const MobileTopSection({Key? key}) : super(key: key);
@@ -22,7 +22,7 @@ class MobileTopSection extends StatelessWidget {
             const Expanded(child:
             CustomText(
               text: 'I build value through design.',
-              fontSize: 35,
+              fontSize: 30,
             ),),
             Expanded(
                 child: ClipRRect(

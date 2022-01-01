@@ -1,9 +1,9 @@
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
-import 'package:portfolio/models/experience.dart';
-import 'package:portfolio/models/projects_data.dart';
-import 'package:portfolio/models/skills.dart';
-import 'package:portfolio/models/social_media.dart';
-import 'package:portfolio/utils/colors.dart';
+import '../../models/experience.dart';
+import '../../models/projects_data.dart';
+import '../../models/skills.dart';
+import '../../models/social_media.dart';
+import '../../utils/colors.dart';
 
 class Constants {
 //https://demo.cocobasic.com/volos-wp/demo-3/
@@ -14,6 +14,7 @@ class Constants {
   static const int messageField = 4;
 
   static const String profileImage =
+      // 'https://firebasestorage.googleapis.com/v0/b/porfolio-336218.appspot.com/o/84640753_148756503000084_5602563773509915072_n%20(2).jpg?alt=media&token=63e1b375-5efb-4ef1-8727-c57edbf03694';
       'https://i.ibb.co/JsGyhPP/84640753-148756503000084-5602563773509915072-n-2.jpg';
   static const String bgImage =
       'https://images.unsplash.com/photo-1576400883215-7083980b6193?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzd8fHRlY2hub2xvZ3l8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60';
@@ -22,26 +23,26 @@ class Constants {
 
   static const String userImage =
       'https://images.unsplash.com/photo-1541855492-581f618f69a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bWFsZXxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60';
-  static const String iconDesign = 'assets/icons/icon_design_x2_green.png';
-  static const String iconDevelop = 'assets/icons/icon_develop_x2_green.png';
-  static const String iconPromote = 'assets/icons/icon_promote_x2_green.png';
-  static const String iconWrite = 'assets/icons/icon_write_x2_green.png';
 
   //images link
   static const String projectNiffty =
+      // 'https://firebasestorage.googleapis.com/v0/b/porfolio-336218.appspot.com/o/Screenshot_2021-12-27-00-47-18-46_9356d306aa2ceff80a83a0adb868fa34.jpg?alt=media&token=3fddfee7-9fb3-4e13-8bfe-997d47b96487';
       'https://i.ibb.co/n1q0T2m/Screenshot-2021-12-27-00-47-18-46-9356d306aa2ceff80a83a0adb868fa34.jpg';
   static const String projectNeighbourHub =
+      // 'https://firebasestorage.googleapis.com/v0/b/porfolio-336218.appspot.com/o/Screenshot_2021-12-27-00-43-55-70_a7fb4e294e80f1af4c4e9eb129b8d8e6.jpg?alt=media&token=6e8aea4f-5d0b-4f06-936d-5506e7316526';
       'https://i.ibb.co/9qMY2W4/Screenshot-2021-12-27-00-43-55-70-a7fb4e294e80f1af4c4e9eb129b8d8e6.jpg';
   static const String projectGearsUnlimited =
+      // 'https://firebasestorage.googleapis.com/v0/b/porfolio-336218.appspot.com/o/1640548351258.png?alt=media&token=f1fb9c0a-73ee-40aa-a854-3708f21c8ba6';
       'https://i.ibb.co/2ccKsQW/1640548351258.png';
   static const String projectFacebookClone =
+      // 'https://firebasestorage.googleapis.com/v0/b/porfolio-336218.appspot.com/o/Screenshot_2021-12-27-00-45-16-75_1ae5d7f870a5420ea17fea142b6713b8.jpg?alt=media&token=0675642a-09f8-4fae-b6c0-68d35ec7a8f1';
       'https://i.ibb.co/LgbJ7vH/Screenshot-2021-12-27-00-45-16-75-1ae5d7f870a5420ea17fea142b6713b8.jpg';
-  static const String projectPopeye = 'https://i.ibb.co/kQPR5rk/unnamed-1.png';
+  static const String projectPopeye =
+      // 'https://firebasestorage.googleapis.com/v0/b/porfolio-336218.appspot.com/o/unnamed.webp?alt=media&token=01ed7566-115f-45b8-9552-0d3a7b4ad371';
+      'https://i.ibb.co/kQPR5rk/unnamed-1.png';
   static const String projectMizdah =
+      // 'https://firebasestorage.googleapis.com/v0/b/porfolio-336218.appspot.com/o/1640548351258.png?alt=media&token=f1fb9c0a-73ee-40aa-a854-3708f21c8ba6';
       'https://i.ibb.co/V3mSGYY/Screenshot-2021-12-27-01-04-23-17-f49ec91a244339f0b05a49d4bdba060b.jpg';
-
-  static const String text =
-      '2015 - 2017 Turpis metus sit diam purus leo in varius ac quam. Nunc amet tristique volutpat adipiscing vulputate phasellus. Eget enim aliquam euismod mauris in vitae viverra blandit lectus diam feugiat. Nunc amet tristique volutpat adipiscing vulputate phasellus. Eget enim aliquam.';
 
   static List<Projects> projectData = [
     Projects(name: 'Niffty', imageUrl: projectNiffty, description: ''),

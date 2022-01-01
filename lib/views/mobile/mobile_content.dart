@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/utils/colors.dart';
-import 'package:portfolio/utils/common_functions.dart';
-import 'package:portfolio/views/desktop/desktop_content.dart';
-import 'package:portfolio/widgets/drawer_item.dart';
+import '../../utils/colors.dart';
+import '../../utils/common_functions.dart';
+import '../../views/desktop/desktop_content.dart';
 
 class MobileContent extends StatelessWidget {
   const MobileContent({Key? key, required this.scrollController})
@@ -12,7 +11,7 @@ class MobileContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final GlobalKey<ScaffoldState> _key = GlobalKey(); // Create a key
-    var height = MediaQuery.of(context).size.height;
+    // var height = MediaQuery.of(context).size.height;
     return Scaffold(
       key: _key,
       // extendBodyBehindAppBar: true,

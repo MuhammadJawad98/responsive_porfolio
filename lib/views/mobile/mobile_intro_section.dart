@@ -1,13 +1,13 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio/utils/colors.dart';
-import 'package:portfolio/utils/common_functions.dart';
-import 'package:portfolio/utils/constants.dart';
-import 'package:portfolio/views/desktop/details_section.dart';
-import 'package:portfolio/widgets/custom_button.dart';
-import 'package:portfolio/widgets/custom_space.dart';
-import 'package:portfolio/widgets/custom_text.dart';
-import 'package:portfolio/widgets/title_text.dart';
+import '../../utils/colors.dart';
+import '../../utils/common_functions.dart';
+import '../../utils/constants.dart';
+import '../../views/desktop/details_section.dart';
+import '../../widgets/custom_button.dart';
+import '../../widgets/custom_space.dart';
+import '../../widgets/custom_text.dart';
+import '../../widgets/title_text.dart';
 
 class MobileIntroSection extends StatelessWidget {
   const MobileIntroSection({Key? key, required this.scrollController})
@@ -41,7 +41,9 @@ class MobileIntroSection extends StatelessWidget {
             const Expanded(
               child: CustomText(text: Constants.introDescription),
             ),
-            Expanded(child: CachedNetworkImage(imageUrl: Constants.dummyImage)),
+            Expanded(child: ClipRRect(
+                borderRadius: BorderRadius.circular(20.0),
+                child: CachedNetworkImage(imageUrl: Constants.dummyImage))),
           ],
         ),
         const CustomSpace(

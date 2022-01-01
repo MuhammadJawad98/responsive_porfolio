@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/widgets/intro_text_row.dart';
+import '../../widgets/intro_text_row.dart';
 class DetailsSection extends StatelessWidget {
   const DetailsSection({Key? key}) : super(key: key);
 

@@ -1,7 +1,7 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import '../../widgets/custom_cache_image.dart';
 import '../../views/desktop/details_section.dart';
 import '../../views/desktop/social_media_icons.dart';
 import '../../views/mobile/mobile_intro_section.dart';
@@ -66,8 +66,12 @@ class DesktopContent extends StatelessWidget {
               ),
               Expanded(
                 child: ClipRRect(
-                    borderRadius: BorderRadius.circular(20.0),
-                    child: Image.network(Constants.profileImage)),
+                  borderRadius: BorderRadius.circular(20.0),
+                  child: const CustomCacheImage(
+                    imageUrl: Constants.profileImage,
+                  ),
+                ),
+                // Image.network(Constants.profileImage)),
               ),
             ]),
           ),
@@ -140,9 +144,14 @@ class DesktopContent extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Expanded(
-                          child: CachedNetworkImage(
-                              imageUrl: Constants.dummyImage)),
+                       Expanded(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(20.0),
+                            child: const CustomCacheImage(
+                              imageUrl: Constants.dummyImage,
+                            ),
+                          ),
+                          ),
                     ],
                   ),
           ),
@@ -173,9 +182,12 @@ class DesktopContent extends StatelessWidget {
                 crossAxisSpacing: 4.0,
                 mainAxisSpacing: 4.0),
             itemBuilder: (BuildContext context, int index) {
-              return CustomImageTile(
-                imgUrl: Constants.projectData[index].imageUrl,
-                text: Constants.projectData[index].name,
+              return Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: CustomImageTile(
+                  imgUrl: Constants.projectData[index].imageUrl,
+                  text: Constants.projectData[index].name,
+                ),
               );
             },
           ),
@@ -277,8 +289,9 @@ class DesktopContent extends StatelessWidget {
               return Builder(
                 builder: (BuildContext context) {
                   return Container(
+                    padding: const EdgeInsets.all(8.0),
                     margin: const EdgeInsets.symmetric(horizontal: 5.0),
-                    child: Image.network(item.imageUrl),
+                    child: CustomCacheImage(imageUrl:item.imageUrl),
                   );
                 },
               );

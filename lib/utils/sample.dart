@@ -3,7 +3,7 @@
 // import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 // import 'package:get/get.dart';
 // import 'package:carousel_slider/carousel_slider.dart';
-// import 'package:portfolio/views/desktop/get_in_touch_view.dart';
+// import '../../views/desktop/get_in_touch_view.dart';
 // import '../../utils/common_functions.dart';
 // import '../../widgets/social_media_icon.dart';
 // import '../../utils/colors.dart';

@@ -14,7 +14,7 @@ class IntroTextRow extends StatelessWidget {
       direction: Axis.horizontal,
       children: [
         SizedBox(
-            width: 100,
+            width: 90,
             child: TitleText(text: title, fontWeight: FontWeight.bold,)),
         CustomText(text: text)
       ],

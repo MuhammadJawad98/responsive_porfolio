@@ -35,7 +35,7 @@ class GetInTouchView extends StatelessWidget {
               title: 'EMAIL :      ',
               text: 'rana.jawad98@gmail.com'),
           IntroTextRow(
-              title: 'WEBSITE : ', text: 'https://muhammadjawad98.github.io/portfolio/'),
+              title: 'WEBSITE : ', text: 'muhammadjawad98.github.io/portfolio/'),
         ],
       ),
     );

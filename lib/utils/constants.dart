@@ -156,7 +156,8 @@ class Constants {
   static const String twitter = 'Twitter';
   static const String linkedin = 'Linkedin';
   static const String copyrighttext =
-      'Copyright © 2021 Muhammad Jawad • Mobile App Developer';
+      'Copyright © 2022 Muhammad Jawad • Mobile App Developer';
+  static const String portfolioLink='muhammadjawad98.github.io/portfolio/';
 
   static List<SocialMedia> socialMediaList = [
     SocialMedia(

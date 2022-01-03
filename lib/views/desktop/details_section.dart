@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/utils/constants.dart';
 import '../../widgets/intro_text_row.dart';
 class DetailsSection extends StatelessWidget {
   const DetailsSection({Key? key}) : super(key: key);
@@ -19,7 +20,7 @@ class DetailsSection extends StatelessWidget {
         IntroTextRow(
             title: 'EMAIL :', text: 'rana.jawad98@gmail.com'),
         IntroTextRow(
-            title: 'WEBSITE :', text: 'www.yourwebsite.com'),
+            title: 'WEBSITE :', text: Constants.portfolioLink),
       ],
     );
   }

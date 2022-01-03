@@ -59,6 +59,14 @@ class Constants {
     Projects(name: 'Popeye', imageUrl: projectPopeye, description: ''),
     Projects(name: 'Mizdah', imageUrl: projectMizdah, description: ''),
   ];
+  static List<Projects> projectsImages = [
+    ...projectData,
+    Projects(name: '', imageUrl: 'https://i.ibb.co/7GJYpc3/Screenshot-2021-12-27-00-44-03-46-a7fb4e294e80f1af4c4e9eb129b8d8e6.jpg', description: ''),
+    Projects(name: '', imageUrl: 'https://i.ibb.co/TmjCGKg/Screenshot-2021-12-27-00-47-45-00-9356d306aa2ceff80a83a0adb868fa34.jpg', description: ''),
+    Projects(name: '', imageUrl: 'https://i.ibb.co/qm12LWH/Screenshot-2021-12-27-00-47-29-55-9356d306aa2ceff80a83a0adb868fa34.jpg', description: ''),
+    Projects(name: '', imageUrl: 'https://i.ibb.co/WGnCFWv/Screenshot-2021-12-27-00-45-39-58-8e7efc52f4e62b62c02054cee75ed1bb.jpg', description: ''),
+    Projects(name: '', imageUrl: 'https://i.ibb.co/41TKckd/Screenshot-2021-12-27-00-45-48-34-8e7efc52f4e62b62c02054cee75ed1bb.jpg', description: ''),
+  ];
 
   static List<Skills> skills = [
     Skills(percent: 70, percentage: '70%', title: 'Java'),

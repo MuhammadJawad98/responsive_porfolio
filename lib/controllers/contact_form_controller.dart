@@ -9,7 +9,7 @@ class ContactFormController extends GetxController {
   final emailController = TextEditingController();
   final subjectController = TextEditingController();
   final messageController = TextEditingController();
-
+ final formKey=GlobalKey<FormState>();
   @override
   void dispose() {
     // TODO: implement dispose

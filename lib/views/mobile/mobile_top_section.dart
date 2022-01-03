@@ -4,8 +4,8 @@ import '../../widgets/custom_text.dart';
 import '../../widgets/title_text.dart';
 
 class MobileTopSection extends StatelessWidget {
-  const MobileTopSection({Key? key}) : super(key: key);
-
+  const MobileTopSection({Key? key,required this.scrollController}) : super(key: key);
+  final ScrollController scrollController;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -35,9 +35,18 @@ class MobileTopSection extends StatelessWidget {
           'I\'m a Pakistani who loves building digital products.',
           fontSize: 18,
         ),
-        const TitleText(
-          text: 'Learn more >',
-          fontSize: 18,
+        GestureDetector(
+          onTap: (){
+            scrollController.animateTo(
+              scrollController.position.pixels + 300,
+              curve: Curves.easeOut,
+              duration: const Duration(milliseconds: 300),
+            );
+          },
+          child: const TitleText(
+            text: 'Learn more >',
+            fontSize: 18,
+          ),
         ),
       ]
     );

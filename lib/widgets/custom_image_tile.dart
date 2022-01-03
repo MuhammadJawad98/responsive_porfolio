@@ -17,16 +17,13 @@ class _CustomImageTileState extends State<CustomImageTile> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        ClipRRect(
-          borderRadius: BorderRadius.circular(20.0),
-          child: CachedNetworkImage(
-            placeholder: (context,url) => const Center(child: CircularProgressIndicator()),
-            errorWidget: (context,url,error) => const Center(child: Icon(Icons.error)),
-            imageUrl: widget.imgUrl,
-            fit: BoxFit.cover,
-            width: 350,
-            height: 700,
-          ),
+        CachedNetworkImage(
+          placeholder: (context,url) => const Center(child: CircularProgressIndicator()),
+          errorWidget: (context,url,error) => const Center(child: Icon(Icons.error)),
+          imageUrl: widget.imgUrl,
+          fit: BoxFit.cover,
+          width: 350,
+          height: 700,
         ),
         CustomText(
           text: widget.text,

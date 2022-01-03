@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:portfolio/views/mobile/mobile_top_section.dart';
 import '../../widgets/custom_cache_image.dart';
 import '../../views/desktop/details_section.dart';
 import '../../views/desktop/social_media_icons.dart';
@@ -38,7 +39,8 @@ class DesktopContent extends StatelessWidget {
             padding: const EdgeInsets.all(15.0),
             width: double.infinity,
             height: height,
-            child: Row(children: [
+            child: size.width< 650 ? MobileTopSection(scrollController: scrollController,):
+            Row(children: [
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -194,39 +196,39 @@ class DesktopContent extends StatelessWidget {
           const CustomSpace(
             height: 50,
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
-                TitleText(
-                  text: Constants.experience,
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                ),
-                ExperienceTile(
-                  title: Constants.text2020,
-                  text: Constants.nifftyDesc,
-                ),
-                ExperienceTile(
-                    title: Constants.text2020,
-                    text: Constants.neighbourhubDesc),
-                ExperienceTile(
-                    title: Constants.text2021,
-                    text: Constants.gearsUnlimitedDesc),
-                ExperienceTile(
-                    title: Constants.text2021, text: Constants.facebookDesc),
-                ExperienceTile(
-                    title: Constants.text2021, text: Constants.popeyeDesc),
-                ExperienceTile(
-                    title: Constants.text2021, text: Constants.ablohDesc),
-                ExperienceTile(
-                    title: Constants.text2021,
-                    text: Constants.mizdahDesc,
-                    isLast: true),
-              ],
-            ),
-          ),
+          // Padding(
+          //   padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+          //   child: Column(
+          //     crossAxisAlignment: CrossAxisAlignment.start,
+          //     children: const [
+          //       TitleText(
+          //         text: Constants.experience,
+          //         fontSize: 30,
+          //         fontWeight: FontWeight.bold,
+          //       ),
+          //       ExperienceTile(
+          //         title: Constants.text2020,
+          //         text: Constants.nifftyDesc,
+          //       ),
+          //       ExperienceTile(
+          //           title: Constants.text2020,
+          //           text: Constants.neighbourhubDesc),
+          //       ExperienceTile(
+          //           title: Constants.text2021,
+          //           text: Constants.gearsUnlimitedDesc),
+          //       ExperienceTile(
+          //           title: Constants.text2021, text: Constants.facebookDesc),
+          //       ExperienceTile(
+          //           title: Constants.text2021, text: Constants.popeyeDesc),
+          //       ExperienceTile(
+          //           title: Constants.text2021, text: Constants.ablohDesc),
+          //       ExperienceTile(
+          //           title: Constants.text2021,
+          //           text: Constants.mizdahDesc,
+          //           isLast: true),
+          //     ],
+          //   ),
+          // ),
           const CustomSpace(
             height: 50,
           ),
@@ -285,7 +287,7 @@ class DesktopContent extends StatelessWidget {
               autoPlayAnimationDuration: const Duration(milliseconds: 800),
             ),
             carouselController: buttonCarouselController,
-            items: Constants.projectData.map((item) {
+            items: Constants.projectsImages.map((item) {
               return Builder(
                 builder: (BuildContext context) {
                   return Container(
@@ -301,19 +303,19 @@ class DesktopContent extends StatelessWidget {
             height: 50,
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 5.0, right: 20.0),
+            padding: const EdgeInsets.only(left: 5.0, right: 5.0),
             child: size.width < 1100
-                ? Column(children: const [
-                    GetInTouchView(),
-                    CustomSpace(
+                ? Column(children:  [
+                    const GetInTouchView(),
+                    const CustomSpace(
                       height: 20,
                     ),
                     ContactForm(),
                   ])
                 : Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
-                      Expanded(flex: 3, child: GetInTouchView()),
+                    children:  [
+                      const Expanded(flex: 3, child: GetInTouchView()),
                       Expanded(
                         flex: 5,
                         child: ContactForm(),
@@ -322,7 +324,7 @@ class DesktopContent extends StatelessWidget {
                   ),
           ),
           const CustomSpace(
-            height: 50,
+            height: 20,
           ),
           Container(
             padding: const EdgeInsets.only(top: 20.0, bottom: 20.0),

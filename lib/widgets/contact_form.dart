@@ -8,12 +8,10 @@ import '../widgets/custom_form_button.dart';
 import '../widgets/custom_text_form_field.dart';
 
 class ContactForm extends StatelessWidget {
-  const ContactForm({Key? key}) : super(key: key);
+  ContactForm({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final  formKey = GlobalKey<FormState>();
-
     return GetBuilder<ContactFormController>(
         init: ContactFormController(),
         builder: (_) {
@@ -22,7 +20,7 @@ class ContactForm extends StatelessWidget {
             color: AppColors.greenColor,
             padding: const EdgeInsets.all(20.0),
             child: Form(
-              key: formKey,
+              key: _.formKey,
               child: Column(
                 children: [
                   CustomTextFormField(
@@ -52,7 +50,7 @@ class ContactForm extends StatelessWidget {
                     height: 30,
                   ),
                   CustomFormButton(onTap: () {
-                    _.sendEmail(formKey,context);
+                    _.sendEmail(_.formKey, context);
                   }),
                   const SizedBox(
                     height: 30,

@@ -10,10 +10,10 @@ class MobileContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final GlobalKey<ScaffoldState> _key = GlobalKey(); // Create a key
+    // final GlobalKey<ScaffoldState> _key = GlobalKey(); // Create a key
     // var height = MediaQuery.of(context).size.height;
     return Scaffold(
-      key: _key,
+      // key: _key,
       // extendBodyBehindAppBar: true,
       // appBar: AppBar(
       //   backgroundColor: AppColors.transparentColor,
@@ -94,7 +94,8 @@ class MobileContent extends StatelessWidget {
           color: AppColors.greyColor,
           child: DesktopContent(
             scrollController: scrollController,
-          )),
+          )
+      ),
     );
   }
 

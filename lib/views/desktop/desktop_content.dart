@@ -45,23 +45,32 @@ class DesktopContent extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    TitleText(
+                  children:  [
+                    const  TitleText(
                       text: Constants.hiIAmJawadText,
                       fontSize: 28,
                       fontWeight: FontWeight.bold,
                     ),
-                    CustomText(
+                    const   CustomText(
                       text: Constants.buildValueText,
                       fontSize: 35,
                     ),
-                    CustomText(
+                    const  CustomText(
                       text: Constants.buildProductText,
                       fontSize: 18,
                     ),
-                    TitleText(
-                      text: 'Learn more >',
-                      fontSize: 18,
+                    GestureDetector(
+                      onTap: (){
+                        scrollController.animateTo(
+                          scrollController.position.pixels + 300,
+                          curve: Curves.easeOut,
+                          duration: const Duration(milliseconds: 300),
+                        );
+                      },
+                      child: TitleText(
+                        text: 'Learn more >',
+                        fontSize: 18,
+                      ),
                     ),
                   ],
                 ),

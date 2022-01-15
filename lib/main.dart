@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolio/widgets/custom_fade_transition.dart';
 import 'package:url_strategy/url_strategy.dart';
 import '../views/mobile/mobile_content.dart';
 import '../routes/route_generator.dart';
@@ -29,9 +30,7 @@ class MyApp extends StatelessWidget {
       initialRoute: RoutesName.loadingScreen,
       theme: ThemeData(
         textTheme: GoogleFonts.poppinsTextTheme(
-          Theme
-              .of(context)
-              .textTheme,
+          Theme.of(context).textTheme,
         ),
       ),
       home: const LoadingScreen(),
@@ -54,6 +53,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
       );
     });
   }
+
   @override
   void initState() {
     // TODO: implement initState
@@ -63,15 +63,14 @@ class _LoadingScreenState extends State<LoadingScreen> {
 
   @override
   Widget build(BuildContext context) {
-
     return Container(
         width: double.infinity,
         height: double.infinity,
         color: AppColors.greenColor,
         child: const Center(
             child: CircularProgressIndicator(
-              color: AppColors.whiteColor,
-            )));
+          color: AppColors.whiteColor,
+        )));
   }
 }
 
@@ -90,7 +89,9 @@ class MainScreen extends StatelessWidget {
       child: Scaffold(
         body: Responsive(
           // Let's work on our mobile part
-          mobile:  MobileContent(scrollController: scrollController,),
+          mobile: MobileContent(
+            scrollController: scrollController,
+          ),
           tablet: Row(
             children: [
               Expanded(
@@ -100,7 +101,7 @@ class MainScreen extends StatelessWidget {
                   height: double.infinity,
                   color: AppColors.greyDarkColor,
                   padding: const EdgeInsets.only(top: 150.0),
-                  child: const DesktopDrawer(),
+                  child: CustomFadeTransition(child: const DesktopDrawer()),
                 ),
               ),
               Expanded(
@@ -109,7 +110,9 @@ class MainScreen extends StatelessWidget {
                     width: double.infinity,
                     // padding: const EdgeInsets.all(8.0),
                     color: AppColors.greyColor,
-                    child:  DesktopContent(scrollController: scrollController,)),
+                    child: DesktopContent(
+                      scrollController: scrollController,
+                    )),
               ),
             ],
           ),
@@ -122,15 +125,17 @@ class MainScreen extends StatelessWidget {
                     height: double.infinity,
                     color: AppColors.greyDarkColor,
                     padding: const EdgeInsets.only(top: 150.0),
-                    child: const DesktopDrawer(),
+                    child: CustomFadeTransition(child: const DesktopDrawer()),
                   )),
               Expanded(
                 flex: _size.width > 1340 ? 8 : 10,
                 child: Container(
                     width: double.infinity,
                     // padding: const EdgeInsets.all(8.0),
-                    color:  AppColors.greyColor,
-                    child: DesktopContent(scrollController: scrollController,)),
+                    color: AppColors.greyColor,
+                    child: DesktopContent(
+                      scrollController: scrollController,
+                    )),
               )
             ],
           ),

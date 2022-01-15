@@ -1,67 +1,83 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import '../utils/colors.dart';
 import '../widgets/title_text.dart';
 
-class LinearChart extends StatelessWidget {
+class LinearChart extends StatefulWidget {
   const LinearChart(
-      {Key? key, required this.percent, required this.percentage, required this.title})
+      {Key? key,
+      required this.percent,
+      required this.percentage,
+      required this.title})
       : super(key: key);
   final double percent;
   final String percentage;
   final String title;
 
   @override
+  State<LinearChart> createState() => _LinearChartState();
+}
+
+class _LinearChartState extends State<LinearChart>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _controller = AnimationController(
+    duration: const Duration(seconds: 3),
+    vsync: this,
+  )..forward();
+  late final Animation<double> _animation = CurvedAnimation(
+    parent: _controller,
+    curve: Curves.fastOutSlowIn,
+  );
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    // double width= 400;
-    double width= Get.width > 1600 ? 400 :  350;
-    // double width= Get.width > 1600 ? 400 : Get.width < 1100?300: 350;
-    // double fontSize= Get.width > 1600 ? 40 : Get.width < 1100?25: 30;
-    // print('>>>> $fontSize');
     return SizedBox(
-        width: width,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-        Padding(
-          padding: const EdgeInsets.only(top:25.0),
-          child: Stack(children: [
-            Padding(
-              padding: const EdgeInsets.only(top:5.0,bottom: 5.0),
-              child: Container(
-                width: width,
-                height: 20,
-                color: AppColors.greyDarkColor,
-              ),
-            ),
-            Container(
-              width: (percent/100)*width,
-              height: 30,
-              color: AppColors.greenColor,
-            ),
-          ]),
-        ),
-        Row(
+        width: 400,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            TitleText(
-              text: title,
-              fontSize: 22,
-            ),
             Padding(
-              padding: const EdgeInsets.only(left:5.0),
-              child: TitleText(
-                text: percentage,
-                fontSize: 22,
-                fontWeight: FontWeight.bold,
-              ),
+              padding: const EdgeInsets.only(top: 25.0),
+              child: Stack(children: [
+                Container(
+                  width: 400,
+                  height: 20,
+                  color: AppColors.greyDarkColor,
+                ),
+                SizeTransition(
+                  sizeFactor: _animation,
+                  axis: Axis.horizontal,
+                  axisAlignment: -1,
+                  child: Container(
+                    height: 20,
+                    width: (widget.percent / 100) * 400,
+                    color: Colors.green,
+                  ),
+                ),
+              ]),
+            ),
+            Row(
+              children: [
+                TitleText(
+                  text: widget.title,
+                  fontSize: 22,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 5.0),
+                  child: TitleText(
+                    text: widget.percentage,
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
             ),
           ],
-        ),
-      ],)
-
-
-
-    );
+        ));
   }
 }

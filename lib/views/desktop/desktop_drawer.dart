@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../utils/colors.dart';
 import '../../widgets/custom_text.dart';
 import '../../widgets/title_text.dart';
 

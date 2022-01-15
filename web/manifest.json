@@ -1,11 +1,11 @@
 {
-    "name": "responsive_portfolio",
-    "short_name": "responsive_portfolio",
+    "name": "Muhammad Jawad",
+    "short_name": "Muhammad Jawad",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Muhammad Jawad Portfolio.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

@@ -36,6 +36,7 @@ class _LinearChartState extends State<LinearChart>
 
   @override
   Widget build(BuildContext context) {
+    var _width=MediaQuery.of(context).size.width<650 ?350 :400;
     return SizedBox(
         width: 400,
         child: Column(
@@ -55,7 +56,7 @@ class _LinearChartState extends State<LinearChart>
                   axisAlignment: -1,
                   child: Container(
                     height: 20,
-                    width: (widget.percent / 100) * 400,
+                    width: (widget.percent / 100) * _width,
                     color: Colors.green,
                   ),
                 ),

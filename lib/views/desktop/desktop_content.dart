@@ -37,7 +37,7 @@ class DesktopContent extends StatelessWidget {
         Container(
           padding: const EdgeInsets.all(15.0),
           width: double.infinity,
-          height: height + 100,
+          height: height ,
           child: size.width < 650
               ? CustomSlideTransition(
                   beginOffset: Offset(-10, 0),

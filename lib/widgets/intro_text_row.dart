@@ -10,14 +10,30 @@ class IntroTextRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Wrap(
-      direction: Axis.horizontal,
-      children: [
-        SizedBox(
-            width: 90,
-            child: TitleText(text: title, fontWeight: FontWeight.bold,)),
-        CustomText(text: text)
-      ],
-    );
+    var _width = MediaQuery.of(context).size.width;
+    return _width <= 1450
+        ? Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              TitleText(
+                text: title,
+                fontWeight: FontWeight.bold,
+              ),
+              CustomText(text: text)
+            ],
+          )
+        : Wrap(
+            direction: Axis.horizontal,
+            children: [
+              SizedBox(
+                  width: 90,
+                  child: TitleText(
+                    text: title,
+                    fontWeight: FontWeight.bold,
+                  )),
+              CustomText(text: text)
+            ],
+          );
   }
 }

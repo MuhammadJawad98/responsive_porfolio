@@ -69,16 +69,14 @@ class Splash extends StatelessWidget {
     return Scaffold(
         backgroundColor: AppColors.greenColor,
         // lightMode ?  AppColors.greenColor : const Color(0xff042a49),
-        body: CustomFadeTransition(
-          child: Center(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset('assets/icon.png'),
-                CustomText(text: 'Muhammad Jawad',fontSize: 25,)
-              ],
-            ),
+        body: Center(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset('assets/icon.png'),
+              CustomFadeTransition(child: CustomText(text: 'Muhammad Jawad',fontSize: 25,))
+            ],
           ),
         ));
   }

@@ -138,7 +138,8 @@ class Constants {
       'https://www.linkedin.com/in/muhammad-jawad-22a14a136/';
   static const String githubUrl = 'https://github.com/MuhammadJawad98';
   static const String resumeLink =
-      'https://drive.google.com/file/d/1oWiwxYFLb552PfKlciyowoaC2Hq59L-z/view?usp=sharing';
+  'https://drive.google.com/file/d/19903BEkQo53N_aKo_0aPEbOT5BJAxKJA/view?usp=sharing';
+      // 'https://drive.google.com/file/d/1oWiwxYFLb552PfKlciyowoaC2Hq59L-z/view?usp=sharing';
 
   static const String hiIAmJawadText = 'Hi, I\'m \nMuhammad Jawad';
   static const String buildValueText = 'I build value through design.';

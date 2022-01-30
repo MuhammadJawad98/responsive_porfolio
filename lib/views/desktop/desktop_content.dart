@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:portfolio/widgets/video_player.dart';
 import '../../views/mobile/mobile_top_section.dart';
 import '../../widgets/custom_fade_transition.dart';
 import '../../widgets/custom_slide_transition.dart';
@@ -338,6 +339,18 @@ class DesktopContent extends StatelessWidget {
             );
           }).toList(),
         ),
+        const CustomSpace(
+          height: 50,
+        ),
+        const Padding(
+          padding: EdgeInsets.only(left: 20.0, right: 20.0),
+          child: TitleText(
+            text: 'Youtube Channel',
+            fontSize: 30.0,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        const YoutubeVideoPlayer(),
         const CustomSpace(
           height: 50,
         ),

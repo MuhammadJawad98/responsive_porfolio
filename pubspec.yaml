@@ -38,6 +38,7 @@ dependencies:
   url_launcher: ^6.0.17
   url_strategy: ^0.2.0
   flutter_native_splash:
+  youtube_player_iframe: ^2.2.2
 
 
   # The following adds the Cupertino Icons font to your application.

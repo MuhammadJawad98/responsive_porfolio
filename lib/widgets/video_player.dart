@@ -48,7 +48,7 @@ class _YoutubeVideoPlayerState extends State<YoutubeVideoPlayer> {
       mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                width: 800,
+                width: 1000,
                 height: 500,
                 child: YoutubePlayerControllerProvider(
                   controller: _controller,

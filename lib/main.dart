@@ -12,10 +12,14 @@ import '../utils/colors.dart';
 import '../utils/responsive.dart';
 import '../views/desktop/desktop_drawer.dart';
 import '../views/desktop/desktop_content.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() {
+void main() async{
   // Here we set the URL strategy for our web app.
   // It is safe to call this function when running on mobile or desktop as well.
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   setPathUrlStrategy();
   runApp(const MyApp());
 }

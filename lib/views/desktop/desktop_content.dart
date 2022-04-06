@@ -342,18 +342,18 @@ class DesktopContent extends StatelessWidget {
         const CustomSpace(
           height: 50,
         ),
-        const Padding(
-          padding: EdgeInsets.only(left: 20.0, right: 20.0),
-          child: TitleText(
-            text: 'Youtube Channel',
-            fontSize: 30.0,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        const YoutubeVideoPlayer(),
-        const CustomSpace(
-          height: 50,
-        ),
+        // const Padding(
+        //   padding: EdgeInsets.only(left: 20.0, right: 20.0),
+        //   child: TitleText(
+        //     text: 'Youtube Channel',
+        //     fontSize: 30.0,
+        //     fontWeight: FontWeight.bold,
+        //   ),
+        // ),
+        // const YoutubeVideoPlayer(),
+        // const CustomSpace(
+        //   height: 50,
+        // ),
         Padding(
           padding: const EdgeInsets.only(left: 5.0, right: 5.0),
           child: size.width < 1100

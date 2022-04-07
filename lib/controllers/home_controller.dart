@@ -6,8 +6,8 @@ import 'package:portfolio/models/projects_model.dart';
 
 class HomeController extends GetxController {
   final databaseReference = FirebaseDatabase.instance;
-  var projectsList = [];
-  var projectHighlights = [];
+  var projectsList = [].obs;
+  var projectHighlights = [].obs;
 
   @override
   void onInit() {

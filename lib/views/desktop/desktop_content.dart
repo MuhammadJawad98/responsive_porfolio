@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:portfolio/controllers/home_controller.dart';
 import 'package:portfolio/widgets/video_player.dart';
 import '../../views/mobile/mobile_top_section.dart';
 import '../../widgets/custom_fade_transition.dart';
@@ -22,10 +23,10 @@ import '../../widgets/title_text.dart';
 import '../../widgets/custom_space.dart';
 
 class DesktopContent extends StatelessWidget {
-  const DesktopContent({Key? key, required this.scrollController})
+   DesktopContent({Key? key, required this.scrollController})
       : super(key: key);
   final ScrollController scrollController;
-
+final homeController = Get.find<HomeController>();
   @override
   Widget build(BuildContext context) {
     CarouselController buttonCarouselController = CarouselController();
@@ -231,6 +232,38 @@ class DesktopContent extends StatelessWidget {
             );
           },
         ),
+        /*
+         Obx((){
+          return GridView.builder(
+            itemCount: homeController.projectsList.length,
+            // itemCount: Constants.projectData.length,
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: Get.width > 1600
+                    ? 3
+                    : Get.width < 1100
+                    ? 1
+                    : 2,
+                mainAxisExtent: 800,
+                crossAxisSpacing: 4.0,
+                mainAxisSpacing: 4.0),
+            itemBuilder: (BuildContext context, int index) {
+              return Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: CustomFadeTransition(
+                  child: CustomImageTile(
+                    // imgUrl: Constants.projectData[index].imageUrl,
+                    // text: Constants.projectData[index].name,
+                    imgUrl: homeController.projectsList[index].image,
+                    text:homeController.projectsList[index].title,
+                  ),
+                ),
+              );
+            },
+          );
+        }),
+         */
         const CustomSpace(
           height: 50,
         ),

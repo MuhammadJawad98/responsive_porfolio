@@ -40,6 +40,7 @@ class DefaultFirebaseOptions {
     apiKey: 'AIzaSyBFidvhAhgvb4GKmpUSSsGbkvO3cmDeyEg',
     appId: '1:722983022196:web:665c5e4d0ec3e61053ab21',
     messagingSenderId: '722983022196',
+    databaseURL: "https://porfolio-336218-default-rtdb.firebaseio.com",
     projectId: 'porfolio-336218',
     authDomain: 'porfolio-336218.firebaseapp.com',
     storageBucket: 'porfolio-336218.appspot.com',

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolio/controllers/home_controller.dart';
 import 'package:portfolio/widgets/custom_fade_transition.dart';
 import 'package:portfolio/widgets/custom_text.dart';
 import 'package:url_strategy/url_strategy.dart';
@@ -15,7 +16,7 @@ import '../views/desktop/desktop_content.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
-void main() async{
+void main() async {
   // Here we set the URL strategy for our web app.
   // It is safe to call this function when running on mobile or desktop as well.
   WidgetsFlutterBinding.ensureInitialized();
@@ -79,7 +80,11 @@ class Splash extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset('assets/icon.png'),
-              CustomFadeTransition(child: CustomText(text: 'Muhammad Jawad',fontSize: 25,))
+              CustomFadeTransition(
+                  child: CustomText(
+                text: 'Muhammad Jawad',
+                fontSize: 25,
+              ))
             ],
           ),
         ));
@@ -143,65 +148,70 @@ class MainScreen extends StatelessWidget {
     // It provide us the width and height
     Size _size = MediaQuery.of(context).size;
     final scrollController = ScrollController(initialScrollOffset: 0);
-
-    return Title(
-      title: 'Muhammad Jawad',
-      color: AppColors.greenColor, // This is required
-      child: Scaffold(
-        body: Responsive(
-          // Let's work on our mobile part
-          mobile: MobileContent(
-            scrollController: scrollController,
-          ),
-          tablet: Row(
-            children: [
-              Expanded(
-                flex: 5,
-                child: Container(
-                  width: double.infinity,
-                  height: double.infinity,
-                  color: AppColors.greyDarkColor,
-                  padding: const EdgeInsets.only(top: 150.0),
-                  child: CustomFadeTransition(child: const DesktopDrawer()),
+    return GetBuilder<HomeController>(
+        init: HomeController(),
+        builder: (_) {
+          return Title(
+            title: 'Muhammad Jawad',
+            color: AppColors.greenColor, // This is required
+            child: Scaffold(
+              body: Responsive(
+                // Let's work on our mobile part
+                mobile: MobileContent(
+                  scrollController: scrollController,
+                ),
+                tablet: Row(
+                  children: [
+                    Expanded(
+                      flex: 5,
+                      child: Container(
+                        width: double.infinity,
+                        height: double.infinity,
+                        color: AppColors.greyDarkColor,
+                        padding: const EdgeInsets.only(top: 150.0),
+                        child:
+                            CustomFadeTransition(child: const DesktopDrawer()),
+                      ),
+                    ),
+                    Expanded(
+                      flex: 9,
+                      child: Container(
+                          width: double.infinity,
+                          // padding: const EdgeInsets.all(8.0),
+                          color: AppColors.greyColor,
+                          child: DesktopContent(
+                            scrollController: scrollController,
+                          )),
+                    ),
+                  ],
+                ),
+                desktop: Row(
+                  children: [
+                    Expanded(
+                        flex: _size.width > 1340 ? 2 : 4,
+                        child: Container(
+                          width: double.infinity,
+                          height: double.infinity,
+                          color: AppColors.greyDarkColor,
+                          padding: const EdgeInsets.only(top: 150.0),
+                          child: CustomFadeTransition(
+                              child: const DesktopDrawer()),
+                        )),
+                    Expanded(
+                      flex: _size.width > 1340 ? 8 : 10,
+                      child: Container(
+                          width: double.infinity,
+                          // padding: const EdgeInsets.all(8.0),
+                          color: AppColors.greyColor,
+                          child: DesktopContent(
+                            scrollController: scrollController,
+                          )),
+                    )
+                  ],
                 ),
               ),
-              Expanded(
-                flex: 9,
-                child: Container(
-                    width: double.infinity,
-                    // padding: const EdgeInsets.all(8.0),
-                    color: AppColors.greyColor,
-                    child: DesktopContent(
-                      scrollController: scrollController,
-                    )),
-              ),
-            ],
-          ),
-          desktop: Row(
-            children: [
-              Expanded(
-                  flex: _size.width > 1340 ? 2 : 4,
-                  child: Container(
-                    width: double.infinity,
-                    height: double.infinity,
-                    color: AppColors.greyDarkColor,
-                    padding: const EdgeInsets.only(top: 150.0),
-                    child: CustomFadeTransition(child: const DesktopDrawer()),
-                  )),
-              Expanded(
-                flex: _size.width > 1340 ? 8 : 10,
-                child: Container(
-                    width: double.infinity,
-                    // padding: const EdgeInsets.all(8.0),
-                    color: AppColors.greyColor,
-                    child: DesktopContent(
-                      scrollController: scrollController,
-                    )),
-              )
-            ],
-          ),
-        ),
-      ),
-    );
+            ),
+          );
+        });
   }
 }

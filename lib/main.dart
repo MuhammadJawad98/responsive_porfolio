@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_strategy/url_strategy.dart';
-
 import '../controllers/home_controller.dart';
 import '../routes/route_generator.dart';
 import '../routes/routes.dart';

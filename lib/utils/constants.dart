@@ -70,11 +70,11 @@ class Constants {
   ];
 
   static List<Skills> skills = [
-    Skills(percent: 70, percentage: '70%', title: 'Java'),
-    Skills(percent: 65, percentage: '65%', title: 'Dart'),
-    Skills(percent: 50, percentage: '50%', title: 'Android'),
-    Skills(percent: 65, percentage: '65%', title: 'Flutter'),
-    Skills(percent: 40, percentage: '40%', title: 'React native'),
+    Skills(percentage: 70, title: 'Java'),
+    Skills(percentage: 65, title: 'Dart'),
+    Skills(percentage: 50, title: 'Android'),
+    Skills(percentage: 65, title: 'Flutter'),
+    Skills(percentage: 40, title: 'React native'),
   ];
 
   static const String nifftyDesc =

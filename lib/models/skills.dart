@@ -1,7 +1,19 @@
 class Skills {
-  final String title;
-  final String percentage;
-  final double percent;
+  String? title;
+  double? percentage;
+  // final double? percent;
 
-  Skills({required this.title, required this.percentage, required this.percent});
+  Skills({this.title, this.percentage});
+
+  Skills.fromJson(Map<String, dynamic> json) {
+    percentage = json['percentage'];
+    title = json['title'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['percentage'] = this.percentage;
+    data['title'] = this.title;
+    return data;
+  }
 }

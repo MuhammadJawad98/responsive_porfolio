@@ -329,9 +329,9 @@ final homeController = Get.find<HomeController>();
             itemBuilder: (BuildContext context, int index) {
               return Center(
                 child: LinearChart(
-                    percent: Constants.skills[index].percent,
-                    percentage: Constants.skills[index].percentage,
-                    title: Constants.skills[index].title),
+                    percent: Constants.skills[index].percentage!,
+                    percentage: '${Constants.skills[index].percentage}',
+                    title: Constants.skills[index].title!),
               );
             },
           ),

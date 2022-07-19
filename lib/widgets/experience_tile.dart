@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+
 import '../utils/colors.dart';
 import '../widgets/title_text.dart';
-
 import 'custom_text.dart';
 
 class ExperienceTile extends StatefulWidget {

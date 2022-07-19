@@ -1,26 +1,26 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:portfolio/controllers/home_controller.dart';
-import 'package:portfolio/widgets/video_player.dart';
-import '../../views/mobile/mobile_top_section.dart';
-import '../../widgets/custom_fade_transition.dart';
-import '../../widgets/custom_slide_transition.dart';
-import '../../widgets/custom_cache_image.dart';
+
+import '../../utils/colors.dart';
+import '../../utils/common_functions.dart';
+import '../../utils/constants.dart';
 import '../../views/desktop/details_section.dart';
+import '../../views/desktop/get_in_touch_view.dart';
 import '../../views/desktop/social_media_icons.dart';
 import '../../views/mobile/mobile_intro_section.dart';
-import '../../views/desktop/get_in_touch_view.dart';
-import '../../utils/common_functions.dart';
-import '../../utils/colors.dart';
-import '../../utils/constants.dart';
+import '../../views/mobile/mobile_top_section.dart';
 import '../../widgets/contact_form.dart';
 import '../../widgets/custom_button.dart';
+import '../../widgets/custom_cache_image.dart';
+import '../../widgets/custom_fade_transition.dart';
 import '../../widgets/custom_image_tile.dart';
+import '../../widgets/custom_slide_transition.dart';
+import '../../widgets/custom_space.dart';
 import '../../widgets/custom_text.dart';
 import '../../widgets/linear_chart.dart';
 import '../../widgets/title_text.dart';
-import '../../widgets/custom_space.dart';
 
 class DesktopContent extends StatelessWidget {
    DesktopContent({Key? key, required this.scrollController})

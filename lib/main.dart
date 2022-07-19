@@ -1,19 +1,19 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:portfolio/controllers/home_controller.dart';
-import 'package:portfolio/widgets/custom_fade_transition.dart';
-import 'package:portfolio/widgets/custom_text.dart';
 import 'package:url_strategy/url_strategy.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
-import '../views/mobile/mobile_content.dart';
+
+import '../controllers/home_controller.dart';
 import '../routes/route_generator.dart';
 import '../routes/routes.dart';
 import '../utils/colors.dart';
 import '../utils/responsive.dart';
-import '../views/desktop/desktop_drawer.dart';
 import '../views/desktop/desktop_content.dart';
-import 'package:firebase_core/firebase_core.dart';
+import '../views/desktop/desktop_drawer.dart';
+import '../views/mobile/mobile_content.dart';
+import '../widgets/custom_fade_transition.dart';
+import '../widgets/custom_text.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -97,6 +97,7 @@ class Init {
   static final instance = Init._();
 
   Future initialize() async {
+    Get.put(HomeController());
     // This is where you can initialize the resources needed by your app while
     // the splash screen is displayed.  Remove the following example because
     // delaying the user experience is a bad design practice!

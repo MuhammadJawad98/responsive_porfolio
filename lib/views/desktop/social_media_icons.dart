@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../utils/common_functions.dart';
 import '../../utils/constants.dart';
 import '../../widgets/social_media_icon.dart';

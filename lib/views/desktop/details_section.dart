@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../utils/constants.dart';
 import '../../widgets/intro_text_row.dart';
 class DetailsSection extends StatelessWidget {
